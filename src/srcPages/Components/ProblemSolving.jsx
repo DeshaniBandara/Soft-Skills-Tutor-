@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import './CommunicationSkillsLesson'; // Reusing your consistent styling
+// ✅ Fixed: Added .css extension
+import './CommunicationSkillsLesson.css';
 
 function ProblemSolving() {
   const navigate = useNavigate();
