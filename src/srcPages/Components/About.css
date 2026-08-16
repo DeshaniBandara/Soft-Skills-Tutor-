@@ -1,8 +1,8 @@
 /* === About Section Container === */
 .about-section {
-  padding: 4rem 5%;
-  background: #ffffff; /* White background for visibility */
-  color: #1a1a1a; /* Dark/Black text for all content */
+  padding: 5rem 5%;
+  background: #ffffff;
+  color: #1a1a1a;
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   text-align: center;
 }
@@ -11,7 +11,7 @@
 .about-section h2 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #0a192f; /* Dark blue heading */
+  color: #1e3a8a;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -22,7 +22,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #4f8cf7, #6a5acd);
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -31,10 +31,10 @@
 .about-section p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #2d2d2d; /* Dark gray for readability */
+  color: #475569;
   max-width: 900px;
   margin: 0 auto 1.5rem;
-  text-align: justify;
+  text-align: left;
 }
 
 /* === Features Grid (Cards) === */
@@ -47,29 +47,30 @@
 }
 
 .feature-card {
-  background: #f8faff;
-  padding: 2rem 1.5rem;
+  background: #f8fafc;
+  padding: 2.5rem 1.8rem;
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eef2f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e2e8f0;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(79, 140, 247, 0.12);
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.08);
+  border-color: #3b82f6;
 }
 
 .feature-card h4 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0a192f;
+  color: #1e3a8a;
   margin-bottom: 0.8rem;
 }
 
 .feature-card p {
   font-size: 0.95rem;
-  color: #3d3d3d;
+  color: #475569;
   text-align: center;
   margin: 0;
 }
@@ -87,16 +88,16 @@
 .feature-desc h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #0a192f;
+  color: #1e3a8a;
   margin-bottom: 1rem;
-  border-left: 5px solid #4f8cf7;
+  border-left: 5px solid #3b82f6;
   padding-left: 1rem;
 }
 
 .feature-desc p {
   font-size: 1rem;
-  color: #2d2d2d;
-  text-align: justify;
+  color: #475569;
+  text-align: left;
   margin: 0;
 }
 
@@ -116,7 +117,7 @@
 
 .values ul li::before {
   content: "✦";
-  color: #4f8cf7;
+  color: #3b82f6;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -124,49 +125,18 @@
 .values ul li p {
   margin: 0;
   font-size: 1rem;
-  color: #2d2d2d;
+  color: #475569;
 }
 
 /* === Responsive Design === */
 @media (max-width: 1024px) {
-  .about-section {
-    padding: 3rem 4%;
-  }
-  .about-section h2 {
-    font-size: 2.2rem;
-  }
+  .about-section { padding: 4rem 4%; }
+  .about-section h2 { font-size: 2.2rem; }
 }
 
 @media (max-width: 768px) {
-  .about-section {
-    padding: 2.5rem 3%;
-  }
-  .about-section h2 {
-    font-size: 1.8rem;
-  }
-  .about-section p {
-    font-size: 1rem;
-    text-align: left;
-  }
-  .about-features {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-  .feature-desc {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-features {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .feature-card {
-    padding: 1.5rem;
-  }
-  .about-section h2 {
-    font-size: 1.5rem;
-  }
+  .about-section { padding: 3rem 3%; }
+  .about-section h2 { font-size: 1.8rem; }
+  .about-features { grid-template-columns: 1fr; gap: 1.5rem; }
+  .feature-desc { grid-template-columns: 1fr; gap: 2rem; }
 }
