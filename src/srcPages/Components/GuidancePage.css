@@ -1,0 +1,139 @@
+/* Reusing your global navigation styles for consistency */
+.explore-page-wrapper {
+  min-height: 100vh;
+  background-color: #fcfcfd;
+  width: 100%;
+}
+
+.explore-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background: white;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.nav-logo-img { height: 40px; width: auto; }
+.nav-title { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0; }
+.nav-title span { color: #5c7cfa; }
+
+/* Guidance Content Styling */
+.gui-main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 6%;
+}
+
+.gui-hero-section {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.gui-status-badge {
+  background: #eff6ff;
+  color: #3b82f6;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gui-hero-section h2 {
+  font-size: 2.8rem;
+  color: #1e3a8a;
+  margin: 15px 0;
+  font-weight: 800;
+}
+
+.gui-hero-section p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Steps Layout */
+.gui-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gui-step-item {
+  display: flex;
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.gui-step-item:hover {
+  border-color: #3b82f6;
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.05);
+}
+
+.gui-step-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gui-icon-holder {
+  width: 50px;
+  height: 50px;
+  background: #f8fafc;
+  color: #1e3a8a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.gui-step-text h3 {
+  font-size: 1.25rem;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.gui-step-text p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 700px;
+}
+
+.gui-step-number-bg {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(30, 58, 138, 0.03);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gui-hero-section h2 { font-size: 2rem; }
+  .gui-step-item { padding: 20px; }
+  .gui-step-number-bg { display: none; }
+}

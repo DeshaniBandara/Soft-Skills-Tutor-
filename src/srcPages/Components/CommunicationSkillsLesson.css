@@ -1,0 +1,139 @@
+.lesson-view-container {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Header using your brand deep blue */
+.lesson-banner-blue {
+  background-color: #1e3a8a;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.lesson-back-btn {
+  position: absolute;
+  left: 5%;
+  top: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lesson-stepper-body {
+  max-width: 900px;
+  margin: 40px auto; /* Centered container but internal content is left-aligned */
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Vertical timeline line */
+.stepper-line {
+  position: absolute;
+  left: 40px; 
+  top: 10px;
+  bottom: 180px;
+  width: 2px;
+  background: #1e3a8a;
+  z-index: 0;
+}
+
+.step-row {
+  display: flex;
+  align-items: flex-start; /* Aligns text to the top of the circle */
+  gap: 25px;
+  margin-bottom: 25px; /* Tightened spacing */
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  min-width: 42px;
+  height: 42px;
+  background-color: #1e3a8a; /* Deep blue circles */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-info {
+  text-align: left; /* Explicit left alignment */
+}
+
+.step-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1e293b;
+  font-weight: 800;
+}
+
+.step-info p {
+  color: #475569;
+  line-height: 1.4;
+  margin-top: 5px; /* Tighter gap between title and text */
+}
+
+.step-list {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.step-list li {
+  color: #475569;
+  margin-bottom: 3px; /* Minimal space between bullets */
+}
+
+.lesson-quote-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.lesson-quote {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+}
+
+.quote-author {
+  display: block;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.footer-action {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+/* Practice button in deep blue */
+.practice-mcq-btn {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 15px 45px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+  transition: transform 0.2s;
+}
+
+.practice-mcq-btn:hover {
+  transform: translateY(-2px);
+  background-color: #172e6e;
+}

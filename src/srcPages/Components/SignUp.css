@@ -1,0 +1,129 @@
+.signup-page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+.signup-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  width: 360px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.signup-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.signin-card h2 {
+  margin-bottom: 1.5rem;
+}
+
+/*.back-button {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-button:hover {
+  background-color: #3b5998; 
+  color: white;              
+  border-color: #3b5998;    
+}*/
+
+
+.signup-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.input-field {
+  text-align: left;
+  background: #f0f0f0; /* The light gray from your screenshot */
+  padding: 12px 18px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.input-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.input-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #1e3a8a; 
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition:  0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #4c6ef5;
+}
+.back-button{
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-button:hover {
+  background-color: #3b5998; /* Fills the button with blue */
+  color: white;              /* Changes text to white so it's readable */
+  border-color: #3b5998;     /* Keeps the border the same blue */
+}
+
+.signup-footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup-footer span {
+  color: #5c7cfa;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,69 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;        /* adjusts with screen height */
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* prevents image distortion */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 420px;
+  color: #fff;
+}
+
+.hero-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+/*@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 320px;
+  }
+
+  .hero-overlay {
+    position: static;
+    margin: 1.5rem;
+    max-width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.3rem;
+  }
+}*/
+
+

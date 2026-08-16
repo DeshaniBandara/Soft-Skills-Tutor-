@@ -1,0 +1,165 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}*/
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card section */
+.card {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 600px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Docs link */
+.read-the-docs {
+  color: #888;
+}
+
+/* 🔹 Responsive tweaks */
+@media (max-width: 1024px) {
+  #root {
+    padding: 1.5rem;
+  }
+  .logo {
+    height: 4em;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  .logo {
+    height: 3em;
+  }
+  .card {
+    max-width: 90%;
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+  .logo {
+    height: 2.5em;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+/* Recommended: Set a global variable in App.css */
+:root {
+  --brand-blue: #1e3a8a;
+}
+
+/* Then use it everywhere */
+.nav-title span {
+  color: var(--brand-blue);
+}
+
+.mcq-button {
+  background-color: var(--brand-blue); /* Updates your buttons too! */
+}
+/* --- Add only this to the bottom of your existing App.css --- */
+
+/* This fixes the PDF grid specifically without touching other pages */
+@media (max-width: 850px) {
+  .resource-grid {
+    grid-template-columns: 1fr !important; /* Forces 1 column on mobile */
+    gap: 20px !important;
+  }
+
+  .download-container {
+    padding: 60px 20px !important; /* Reduces side spacing on small screens */
+  }
+
+  .download-header h1 {
+    font-size: 2rem !important; /* Shrinks the title so it fits on one line */
+  }
+
+  /* Makes the pink boxes fit better on mobile screens */
+  .card-frame {
+    padding: 20px !important;
+  }
+}

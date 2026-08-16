@@ -1,0 +1,76 @@
+.upload-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.upload-box {
+  margin: 30px 0;
+  padding: 40px;
+  border: 2px dashed #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.analyze-btn {
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto 0;
+  font-weight: 600;
+}
+
+.feedback-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.feedback-popup {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  animation: scaleIn 0.3s ease-out;
+}
+.back-button{
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-button:hover {
+  background-color: #3b5998; /* Fills the button with blue */
+  color: white;              /* Changes text to white so it's readable */
+  border-color: #3b5998;     /* Keeps the border the same blue */
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

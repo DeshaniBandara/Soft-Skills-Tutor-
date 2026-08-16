@@ -1,0 +1,134 @@
+.navbar {
+  /*width:100%;
+  Height:70;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #1e3a8a; /* dark blue */
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 100px;
+  width: 150px;
+  border-radius: 50%; /* oval/circle */
+  margin-right: 12px;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.navbar-links li:hover {
+  text-decoration: underline;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+/*.navbar-links a:hover {
+  color: #5d42a7;            /* 👈 hover color */
+
+
+/*Prevent visited link color change */
+.navbar-links a:visited {
+  color: white;
+}
+/* Sign In button */
+.signin-btn {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #1e3a8a;
+  border: none;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px; /* pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover effect */
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px #ffffff;
+}
+
+/* Active (click) */
+.signin-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px #ffffff;
+}
+.nav-signin {
+  list-style: none;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.signin-btn:hover {
+  transform: translateY(-2px);
+  background-color: #f8f9fa; /* Slightly off-white so it feels interactive */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none; /* Ensures no border appears */
+  outline: none; /* Ensures no focus ring appears */
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;       /* Stack items vertically */
+    padding: 1rem;                /* Reduce padding */
+  }
+
+  .navbar-left {
+    margin-bottom: 1rem;          /* Space between logo/title and links */
+  }
+
+  .navbar-logo {
+    height: 60px;                 /* Smaller logo */
+    width: 60px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;            /* Smaller title */
+  }
+
+  .nav-links {
+    flex-direction: column;       /* Stack links vertically */
+    gap: 1rem;                    /* Reduce spacing */
+  }
+}
+@media (max-width: 768px) {
+  .signin-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+

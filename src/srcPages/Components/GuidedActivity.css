@@ -1,0 +1,140 @@
+.activity-view-container {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Header using deep brand blue */
+.activity-header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.act-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.header-content p {
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+/* Grid layout for cards */
+.activity-grid {
+  max-width: 1200px;
+  margin: -30px auto 0; /* Overlaps slightly with header */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  border-top: 4px solid #1e3a8a; /* Accent line */
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-badge {
+  background: #eff6ff;
+  color: #1e3a8a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.card-info h3 {
+  margin: 0 0 10px 0;
+  color: #1e293b;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.card-info p {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.play-icon {
+  opacity: 0.7;
+}
+/* Update this to remove any negative margins */
+.activity-grid-layout {
+  max-width: 1200px;
+  margin: 40px auto; /* Changed from -30px to 40px to push cards down */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 25px;
+}
+
+/* Ensure the header doesn't overlap content */
+.activity-header-blue {
+  background-color: #1e3a8a; /* Your brand blue */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative; /* Changed from fixed/absolute if applicable */
+  z-index: 10;
+}
+
+/* Cleaner Card Style (No Icon) */
+.activity-card-modern {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Slightly deeper shadow for clarity */
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #1e3a8a; /* Top border for a modern look */
+  transition: transform 0.2s;
+}

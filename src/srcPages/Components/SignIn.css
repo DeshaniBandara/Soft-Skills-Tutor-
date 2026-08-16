@@ -1,0 +1,126 @@
+.signin-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+.signin-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  width: 360px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.signin-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.signin-card h2 {
+  margin-bottom: 1.5rem;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.google-icon {
+  font-weight: bold;
+  margin-right: 8px;
+  color: #1e3a8a;
+}
+
+.or-text {
+  margin: 1rem 0;
+  color: #777;
+}
+
+.signin-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #e0e0e0;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1e3a8a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #4c6ef5;
+}
+
+.reset {
+  margin-top: 1rem;
+  color: #5a7bea;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 0.5rem;
+}
+
+.signup span {
+  color: #5a7bea;
+  cursor: pointer;
+}
+.back-btn {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-btn:hover {
+  background-color: #3b5998; /* Fills the button with blue */
+  color: white;              /* Changes text to white so it's readable */
+  border-color: #3b5998;     /* Keeps the border the same blue */
+}
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.or-divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb; /* Color of the horizontal lines */
+}
+
+.or-divider .or-text {
+  margin: 0 10px;
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
