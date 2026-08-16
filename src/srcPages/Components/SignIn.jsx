@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react'; // Added Eye and EyeOff
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { supabase } from "./supabaseClient";
 import "./SignIn.css";
-import logo from "../../assets/logo.png";  // 🔴 Fix update import logo from "../../assets/logo.png"; error
+import logo from "../../assets/logo.png";
 
 function SignIn() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false); // New state for toggle
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleGoogleSignIn = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'https://localhost:5173/dashboard',
+        redirectTo: 'https://soft-skills-tutor.vercel.app/dashboard', // ✅ Vercel URL
       },
     });
     if (error) alert(error.message);
@@ -79,14 +79,14 @@ function SignIn() {
         
           <div className="input-group">
             <label><Lock size={14}/>  Password</label>
-            <div style={{ position: 'relative' }}> {/* Wrapper for positioning icon */}
+            <div style={{ position: 'relative' }}>
               <input 
                 type={showPassword ? "text" : "password"} 
                 placeholder="Enter your password" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                style={{ width: '100%', paddingRight: '40px' }} // Space for the icon
+                style={{ width: '100%', paddingRight: '40px' }}
               />
               <button 
                 type="button"

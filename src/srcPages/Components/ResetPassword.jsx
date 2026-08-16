@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Mail, CheckCircle } from 'lucide-react'; 
-import { supabase } from './supabaseClient'; // Make sure this path is correct!
+import { supabase } from './supabaseClient';
 import './ResetPassword.css';
-import logo from "../../assets/logo.png";  // 🔴 Fix update import logo from "../../assets/logo.png"; error
+import logo from "../../assets/logo.png";
 
 function ResetPassword() {
   const navigate = useNavigate();
@@ -15,10 +15,8 @@ function ResetPassword() {
     e.preventDefault();
     setLoading(true);
 
-    // This tells Supabase to send the reset email
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      // This MUST match the Redirect URL you set in the Supabase Dashboard
-      redirectTo: 'https://localhost:5173/update-password', 
+      redirectTo: 'https://soft-skills-tutor.vercel.app/update-password', // ✅ Vercel URL
     });
 
     if (error) {
@@ -40,7 +38,6 @@ function ResetPassword() {
           <img src={logo} alt="SoftSkillsTutor Logo" className="auth-logo" />
         </div>
         
-        {/* If the email is sent, show a success message instead of the form */}
         {isSent ? (
           <div className="success-state">
             <CheckCircle size={60} color="#22c55e" style={{ marginBottom: '1rem' }} />
