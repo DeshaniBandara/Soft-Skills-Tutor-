@@ -57,6 +57,7 @@
 .feature-card {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 2.5rem 1.8rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -65,8 +66,8 @@
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
   border-color: #3b82f6;
   background: #ffffff;
 }
@@ -85,7 +86,7 @@
   margin: 0;
 }
 
-/* === Mission, Vision, Values (Feature Desc) === */
+/* === Mission, Vision, Values Container === */
 .feature-desc {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -93,6 +94,7 @@
   margin: 3rem auto;
   max-width: 1200px;
   text-align: left;
+  padding: 0 1rem;
 }
 
 .feature-desc h3 {
@@ -146,13 +148,50 @@
 
 /* === Responsive Design === */
 @media (max-width: 1024px) {
-  .about-section { padding: 4rem 4%; }
-  .about-section h2 { font-size: 2.2rem; }
+  .about-section {
+    padding: 4rem 4%;
+  }
+  .about-section h2 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .about-section { padding: 3rem 3%; }
-  .about-section h2 { font-size: 1.8rem; }
-  .about-features { grid-template-columns: 1fr; gap: 1.5rem; }
-  .feature-desc { grid-template-columns: 1fr; gap: 2rem; }
+  .about-section {
+    padding: 3rem 3%;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .feature-desc {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  .feature-desc h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2.5rem 2%;
+  }
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+  .feature-card {
+    padding: 1.5rem 1.2rem;
+  }
+  .feature-card h4 {
+    font-size: 1.1rem;
+  }
 }
