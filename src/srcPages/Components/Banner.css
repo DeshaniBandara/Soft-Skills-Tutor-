@@ -1,8 +1,7 @@
-/* === Hero Section === */
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh;        /* adjusts with screen height */
   min-height: 420px;
   overflow: hidden;
 }
@@ -10,7 +9,7 @@
 .hero-banner {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* prevents image distortion */
 }
 
 .hero-overlay {
@@ -18,50 +17,53 @@
   top: 50%;
   left: 8%;
   transform: translateY(-50%);
-  background: rgba(10, 25, 47, 0.55);
-  backdrop-filter: blur(2px);
-  padding: 2.5rem;
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 16px;
   max-width: 420px;
-  color: white;
+  color: #fff;
 }
 
 .hero-overlay h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: white;
 }
 
 .hero-overlay p {
   font-size: 1.1rem;
-  line-height: 1.7;
-  opacity: 0.9;
+  line-height: 1.6;
 }
+/*@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 320px;
+  }
 
-/* === Responsive === */
-@media (max-width: 1024px) {
-  .hero-overlay { left: 5%; max-width: 350px; padding: 2rem; }
-  .hero-overlay h2 { font-size: 1.8rem; }
-}
-
-@media (max-width: 768px) {
-  .hero-section { height: auto; min-height: 300px; }
   .hero-overlay {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
+    position: static;
     margin: 1.5rem;
     max-width: 100%;
     padding: 1.5rem;
     text-align: center;
   }
-  .hero-overlay h2 { font-size: 1.5rem; }
-  .hero-overlay p { font-size: 1rem; }
-}
 
-@media (max-width: 480px) {
-  .hero-overlay { padding: 1.2rem; margin: 1rem; }
-  .hero-overlay h2 { font-size: 1.3rem; }
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
 }
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.3rem;
+  }
+}*/
+
+

@@ -1,12 +1,10 @@
-/* === Page Wrapper === */
 .explore-page-wrapper {
   min-height: 100vh;
   background-color: #fcfcfd;
   width: 100%;
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* === Navigation === */
 .explore-top-nav {
   display: flex;
   justify-content: space-between;
@@ -19,7 +17,7 @@
 .back-link {
   background: none;
   border: none;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -29,7 +27,7 @@
 }
 
 .back-link:hover {
-  color: var(--brand-light-blue);
+  color: #3b82f6;
 }
 
 .explore-brand {
@@ -39,22 +37,22 @@
 }
 
 .nav-logo-img {
-  height: 40px;
+  height: 40px; /* Adjust based on your logo aspect ratio */
   width: auto;
 }
 
 .nav-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--brand-dark);
+  color: #1e293b;
   margin: 0;
 }
 
 .nav-title span {
-  color: var(--brand-light-blue);
+  color: #5c7cfa;
 }
 
-/* === Main Grid === */
+/* Responsive Grid */
 .explore-main-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -64,7 +62,6 @@
   margin: 0 auto;
 }
 
-/* === Sidebar === */
 .explore-sidebar {
   position: sticky;
   top: 40px;
@@ -88,21 +85,21 @@
 
 .explore-intro h2 {
   font-size: 2.2rem;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .explore-intro p {
-  color: var(--text-gray);
+  color: #64748b;
   line-height: 1.7;
   font-size: 1.1rem;
 }
 
-/* === Lesson List === */
+/* Lesson List Styles */
 .list-header h3 {
   font-size: 1.5rem;
-  color: var(--brand-dark);
+  color: #0f172a;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -113,7 +110,43 @@
   gap: 16px;
 }
 
-/* === Responsive === */
+.lesson-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 24px 32px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  text-align: left;
+}
+
+.lesson-item-row:hover {
+  border-color: #3b82f6;
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.06);
+}
+
+.lesson-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.lesson-icon-wrap {
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.lesson-item-row:hover .lesson-icon-wrap {
+  color: #3b82f6;
+  transform: scale(1.2);
+}
+
+/* Tablet and Mobile adjustments */
 @media (max-width: 1024px) {
   .explore-main-grid {
     grid-template-columns: 1fr;
@@ -122,20 +155,4 @@
   }
   .explore-sidebar { position: static; }
   .explore-intro h2 { font-size: 1.8rem; }
-}
-
-@media (max-width: 768px) {
-  .explore-top-nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0.8rem 4%;
-  }
-  .nav-title { font-size: 1.1rem; }
-  .explore-intro h2 { font-size: 1.4rem; }
-}
-
-@media (max-width: 480px) {
-  .explore-main-grid { padding: 20px 4%; }
-  .explore-intro h2 { font-size: 1.2rem; }
-  .explore-intro p { font-size: 0.95rem; }
 }

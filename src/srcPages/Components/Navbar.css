@@ -1,135 +1,134 @@
-/* === Navbar Container === */
 .navbar {
+  /*width:100%;
+  Height:70;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  background-color: #0a192f; /* Your dark blue background */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif; /* Your original font */
+  padding: 10px 40px;
+  background-color: #1e3a8a; /* dark blue */
+  color: white;
 }
 
-/* === Left Side (Logo + Title) === */
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .navbar-logo {
-  height: 50px;
-  width: auto;
+  height: 100px;
+  width: 150px;
+  border-radius: 50%; /* oval/circle */
+  margin-right: 12px;
 }
 
 .navbar-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.navbar-title span {
-  color: #4f8cf7; /* Your blue accent color */
-}
-
-/* === Right Side (Nav Links) === */
 .navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
-/* ✅ THIS FIXES THE FONT AND STYLE FOR THE <a> TAGS */
-.navbar-links a {
-  color: #ffffff;
-  font-family: inherit;        /* Parent font එකම ගන්න */
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.5rem 0.2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  background: none;
-  border: none;
+.navbar-links li {
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
-.navbar-links a:hover {
-  color: #4f8cf7; /* Your hover blue color */
+.navbar-links li:hover {
+  text-decoration: underline;
 }
 
-.navbar-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #4f8cf7;
-  transition: width 0.3s ease;
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
-.navbar-links a:hover::after {
-  width: 100%;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
+/*.navbar-links a:hover {
+  color: #5d42a7;            /* 👈 hover color */
 
-/* === Sign In Button === */
+
+/*Prevent visited link color change */
+.navbar-links a:visited {
+  color: white;
+}
+/* Sign In button */
 .signin-btn {
-  background: linear-gradient(135deg, #4f8cf7, #6a5acd);
-  color: #fff;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #1e3a8a;
   border: none;
-  padding: 0.6rem 1.8rem;
-  border-radius: 30px;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px; /* pill shape */
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  font-family: inherit;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
+/* Hover effect */
 .signin-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(79, 140, 247, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px #ffffff;
 }
 
-/* === Responsive Design === */
+/* Active (click) */
+.signin-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px #ffffff;
+}
+.nav-signin {
+  list-style: none;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.signin-btn:hover {
+  transform: translateY(-2px);
+  background-color: #f8f9fa; /* Slightly off-white so it feels interactive */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none; /* Ensures no border appears */
+  outline: none; /* Ensures no focus ring appears */
+}
+
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 1rem 2%;
+    flex-direction: column;       /* Stack items vertically */
+    padding: 1rem;                /* Reduce padding */
   }
 
-  .navbar-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .navbar-title {
-    font-size: 1.2rem;
+  .navbar-left {
+    margin-bottom: 1rem;          /* Space between logo/title and links */
   }
 
   .navbar-logo {
-    height: 40px;
+    height: 60px;                 /* Smaller logo */
+    width: 60px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;            /* Smaller title */
+  }
+
+  .nav-links {
+    flex-direction: column;       /* Stack links vertically */
+    gap: 1rem;                    /* Reduce spacing */
+  }
+}
+@media (max-width: 768px) {
+  .signin-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
-@media (max-width: 480px) {
-  .navbar-links {
-    gap: 0.8rem;
-  }
-  .navbar-links a {
-    font-size: 0.85rem;
-  }
-  .signin-btn {
-    padding: 0.4rem 1rem;
-    font-size: 0.8rem;
-  }
-}
+

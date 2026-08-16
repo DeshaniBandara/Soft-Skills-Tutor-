@@ -1,4 +1,4 @@
-/* === Wrapper === */
+/* Reusing your global navigation styles for consistency */
 .explore-page-wrapper {
   min-height: 100vh;
   background-color: #fcfcfd;
@@ -17,7 +17,7 @@
 .back-link {
   background: none;
   border: none;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -26,10 +26,10 @@
 }
 
 .nav-logo-img { height: 40px; width: auto; }
-.nav-title { font-size: 1.3rem; font-weight: 800; color: var(--brand-dark); margin: 0; }
-.nav-title span { color: var(--brand-light-blue); }
+.nav-title { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0; }
+.nav-title span { color: #5c7cfa; }
 
-/* === Main Content === */
+/* Guidance Content Styling */
 .gui-main-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -43,28 +43,27 @@
 
 .gui-status-badge {
   background: #eff6ff;
-  color: var(--brand-light-blue);
+  color: #3b82f6;
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  display: inline-block;
 }
 
 .gui-hero-section h2 {
   font-size: 2.8rem;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   margin: 15px 0;
   font-weight: 800;
 }
 
 .gui-hero-section p {
-  color: var(--text-gray);
+  color: #64748b;
   font-size: 1.1rem;
 }
 
-/* === Steps === */
+/* Steps Layout */
 .gui-steps-container {
   display: flex;
   flex-direction: column;
@@ -84,9 +83,9 @@
 }
 
 .gui-step-item:hover {
-  border-color: var(--brand-light-blue);
+  border-color: #3b82f6;
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.06);
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.05);
 }
 
 .gui-step-visual {
@@ -99,7 +98,7 @@
   width: 50px;
   height: 50px;
   background: #f8fafc;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -109,13 +108,13 @@
 
 .gui-step-text h3 {
   font-size: 1.25rem;
-  color: var(--brand-blue);
+  color: #1e3a8a;
   margin-bottom: 8px;
   font-weight: 700;
 }
 
 .gui-step-text p {
-  color: var(--text-gray);
+  color: #64748b;
   line-height: 1.6;
   font-size: 1rem;
   max-width: 700px;
@@ -132,16 +131,9 @@
   pointer-events: none;
 }
 
-/* === Responsive === */
+/* Responsive */
 @media (max-width: 768px) {
   .gui-hero-section h2 { font-size: 2rem; }
-  .gui-step-item { padding: 20px; flex-direction: column; gap: 15px; }
+  .gui-step-item { padding: 20px; }
   .gui-step-number-bg { display: none; }
-  .gui-main-content { padding: 30px 5%; }
-}
-
-@media (max-width: 480px) {
-  .gui-hero-section h2 { font-size: 1.5rem; }
-  .gui-step-item { padding: 15px; }
-  .gui-step-text h3 { font-size: 1.1rem; }
 }

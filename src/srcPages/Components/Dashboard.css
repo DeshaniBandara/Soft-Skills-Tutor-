@@ -1,22 +1,160 @@
-/* Keep your existing Dashboard.css - it's already great! 
-   Just add these small improvements: */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap:12 px;
+}
 
-/* Better card shadows */
+.nav-logo-img {
+  height: 40px; /* Adjust this value until it looks right */
+  width: auto;  /* Maintains the aspect ratio */
+  /*object-fit: contain;*/
+}
+.nav-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.nav-title span {
+  color: #5c7cfa; /* That nice light blue from your original design */
+}
+
+/* Navbar */
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 6%;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Increase this number to make the gap larger */
+}
+.dashboard-nav h1 span { color:#1e3a8a; }
+
+/* The Grid Layout - This fills space 1 and 2 */
+.dashboard-grid-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* 1.5 parts left, 1 part right */
+  gap: 30px;
+  padding: 40px 6%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Column */
+.welcome-banner { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+.user-profile-icon { background: #eef2ff; color: #5c7cfa; padding: 15px; border-radius: 16px; }
+.welcome-banner h2 { font-size: 1.8rem; font-weight: 700; }
+
+.wide-progress-card {
+  background: linear-gradient(135deg, #5c7cfa 0%, #1e3a8a 100%);
+  border-radius: 24px;
+  padding: 35px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(92, 124, 250, 0.2);
+}
+
+.wide-stat-item { margin-bottom: 25px; }
+.stat-label { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 500; }
+.wide-bar { background: rgba(255, 255, 255, 0.2); height: 12px; border-radius: 10px; }
+.wide-fill { background: white; height: 100%; border-radius: 10px; }
+
+/* Right Column */
+.action-section h3, .activity-feed h3 { font-size: 1.1rem; margin-bottom: 20px; font-weight: 600; }
+
+.action-vertical-list { display: flex; flex-direction: column; gap: 12px; }
+
+/*.flat-action-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1e3a8a;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}*/
+
+.flat-action-card:hover { transform: translateX(5px); border-color: #5c7cfa; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .flat-action-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff; /* Pure white as you requested */
+  border: 1px solid #e2e8f0; /* Soft border */
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 
-.flat-action-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+
+.icon-box { padding: 10px; border-radius: 12px; display: flex; align-items: center; color: white; }
+.flat-action-card.blue .icon-box { background: #5c7cfa; }
+.flat-action-card.indigo .icon-box { background: #4c6ef5; }
+.flat-action-card.purple .icon-box { background: #7048e8; }
+.flat-action-card span { flex: 1; text-align: left; font-weight: 600; color: #334155; }
+
+/* Force icons to have size and color */
+.lucide-icon, .arrow-icon {
+  display: inline-block !important;
+  visibility: visible !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  stroke: currentColor; /* Inherits the color from the icon-box */
 }
 
-/* Modal improvements */
-.modal-card {
-  animation: modalPop 0.3s ease-out;
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #eef2ff; /* Light blue background for the icon */
+  color: #1e3a8a;      /* Your deep blue brand color */
+  border-radius: 10px;
 }
 
-@keyframes modalPop {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.arrow-icon {
+  color: #cbd5e1;
+  margin-left: auto; /* Pushes chevron to the right as seen in Screenshot 965 */
 }
+
+/* Activity Feed */
+.activity-feed { margin-top: 35px; background: white; padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0; }
+.history-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+.history-dot { width: 8px; height: 8px; background: #5c7cfa; border-radius: 50%; }
+.time-tag { margin-left: auto; font-size: 0.75rem; color: #94a3b8; }
+
+/* Navigation Pills */
+.logout-pill {
+  background: #fff1f2;
+  color: #e11d48;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Modal Overlay */
+.modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-card { background: white; padding: 30px; border-radius: 24px; width: 400px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
