@@ -1,13 +1,23 @@
 import { AssemblyAI } from 'assemblyai';
 
-// This uses the key from your .env file
+// ✅ Check if API key exists
+const apiKey = import.meta.env.VITE_ASSEMBLY_AI_KEY;
+if (!apiKey) {
+  console.warn("⚠️ VITE_ASSEMBLY_AI_KEY is missing in .env file");
+}
+
 const client = new AssemblyAI({
-  apiKey: import.meta.env.VITE_ASSEMBLY_AI_KEY 
+  apiKey: apiKey || 'dummy-key' // Fallback to prevent crash
 });
 
 export const getSpeechAnalysis = async (videoUrl) => {
   try {
-    // 1. Submit the video URL for transcription and sentiment analysis
+    // Check if API key is available
+    if (!apiKey) {
+      throw new Error("AssemblyAI API key is not configured. Please add VITE_ASSEMBLY_AI_KEY to your .env file.");
+    }
+
+    // 1. Submit the video URL for transcription
     const transcript = await client.transcripts.transcribe({
       audio: videoUrl,
       sentiment_analysis: true,
@@ -19,23 +29,21 @@ export const getSpeechAnalysis = async (videoUrl) => {
       throw new Error(`AssemblyAI Error: ${transcript.error}`);
     }
 
-    // --- ANALYTICS LOGIC FOR YOUR PROJECT ---
+    // --- ANALYTICS LOGIC ---
 
     // A. Calculate Confidence Score based on Sentiment
-    const totalSentiments = transcript.sentiment_analysis_results.length;
-    const positiveSentiments = transcript.sentiment_analysis_results.filter(
+    const totalSentiments = transcript.sentiment_analysis_results?.length || 0;
+    const positiveSentiments = transcript.sentiment_analysis_results?.filter(
       (s) => s.sentiment === 'POSITIVE' || s.sentiment === 'NEUTRAL'
-    ).length;
+    ).length || 0;
     
-    // Normalize score out of 10
     const confidenceScore = totalSentiments > 0 
       ? Math.round((positiveSentiments / totalSentiments) * 10) 
       : 5;
 
     // B. Calculate Speech Pace (Words Per Minute)
-    // duration is in seconds, so we convert to minutes
     const minutes = transcript.audio_duration / 60;
-    const wpm = Math.round(transcript.words.length / minutes);
+    const wpm = Math.round(transcript.words?.length / minutes) || 0;
 
     let paceFeedback = "";
     if (wpm < 110) paceFeedback = "a bit slow. Try to speak with more energy.";
@@ -43,10 +51,10 @@ export const getSpeechAnalysis = async (videoUrl) => {
     else paceFeedback = "at a perfect professional pace.";
 
     // C. Detect Filler Words
-    const text = transcript.text.toLowerCase();
+    const text = transcript.text?.toLowerCase() || "";
     const fillerCount = (text.match(/um|uh|err|like/g) || []).length;
 
-    // 3. Return the formatted object to your Frontend
+    // 3. Return the formatted object
     return {
       confidence: `${confidenceScore}/10`,
       language: `${wpm} WPM. Your speaking rate is ${paceFeedback}`,
@@ -57,6 +65,11 @@ export const getSpeechAnalysis = async (videoUrl) => {
 
   } catch (error) {
     console.error("Analysis Logic Error:", error);
-    throw new Error("The AI could not process the audio. Ensure your video has clear sound.");
+    // Return a fallback response instead of throwing
+    return {
+      confidence: "5/10",
+      language: "Unable to analyze speech pace.",
+      suggestion: "Please ensure your video has clear audio and try again."
+    };
   }
 };

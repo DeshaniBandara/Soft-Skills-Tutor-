@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
-import { mcqData } from '../../data/mcqDataProblemSolving'; 
-import './QuizComponent.css'; 
+import { mcqData } from '../../data/mcqDataProblemSolving';
+import './QuizComponent.css';
 
 function QuizProblemSolvingComponent() {
   const navigate = useNavigate();
-  const questions = mcqData["problem-solving"]; 
+  // ✅ Fixed: Correct data key
+  const questions = mcqData["problem-solving-critical-thinking"];
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);

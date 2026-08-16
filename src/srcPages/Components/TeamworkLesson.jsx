@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import './CommunicationSkillsLesson'; // Reusing the same CSS for consistency
+import './CommunicationSkillsLesson.css'; // ✅ .css add කළා
 
 function TeamworkLesson() {
   const navigate = useNavigate();

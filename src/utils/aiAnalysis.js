@@ -1,6 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDj12dj84H2sUjMDQQCphUtVzcFFyBHyXA");
+// ✅ API Key from environment variable
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const genAI = new GoogleGenerativeAI(API_KEY);
 
 export const getAIFeedback = async (videoUrl) => {
   try {
@@ -17,7 +19,6 @@ export const getAIFeedback = async (videoUrl) => {
     });
 
     // 3. The "Stable" Model Config
-    // We use gemini-1.5-flash because it's built for video
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `
@@ -42,7 +43,7 @@ export const getAIFeedback = async (videoUrl) => {
 
     const text = await result.response.text();
     
-    // 5. Extract JSON (Sometimes AI adds extra text, this cleans it)
+    // 5. Extract JSON
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error("AI response was not valid JSON");
     
