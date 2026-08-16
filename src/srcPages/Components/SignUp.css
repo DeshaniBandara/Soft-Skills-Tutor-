@@ -1,69 +1,62 @@
-/* ==========================================
-   ENHANCED SIGN-UP CSS
-   ========================================== */
-
 .signup-page-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #f5f7fb 0%, #e4ecf7 100%);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
+  background: #f5f7fb;
 }
-
 .signup-card {
   background: #ffffff;
   padding: 2.5rem;
-  width: 380px;
-  border-radius: 20px;
+  width: 360px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.08);
-  border: 1px solid #e2e8f0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
-.signup-card:hover {
-  box-shadow: 0 20px 45px rgba(30, 58, 138, 0.12);
-}
-
 .signup-logo {
-  width: 110px;
-  margin-bottom: 1.2rem;
-  object-fit: contain;
+  width: 120px;
+  margin-bottom: 1rem;
 }
 
-.signup-card h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+.signin-card h2 {
+  margin-bottom: 1.5rem;
 }
+
+/*.back-button {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-button:hover {
+  background-color: #3b5998; 
+  color: white;              
+  border-color: #3b5998;    
+}*/
+
 
 .signup-subtitle {
-  color: #64748b;
-  margin-bottom: 24px;
+  color: #666;
+  margin-bottom: 30px;
   font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .input-field {
   text-align: left;
-  background: #f8fafc;
-  padding: 10px 16px;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  border: 1px solid #e2e8f0;
-  transition: all 0.2s ease;
-}
-
-.input-field:focus-within {
-  border-color: #3b82f6;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background: #f0f0f0; /* The light gray from your screenshot */
+  padding: 12px 18px;
+  border-radius: 14px;
+  margin-bottom: 15px;
 }
 
 .input-field label {
@@ -71,11 +64,9 @@
   align-items: center;
   gap: 8px;
   font-size: 0.75rem;
-  font-weight: 700;
-  color: #64748b;
+  font-weight: bold;
+  color: #444;
   margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .input-field input {
@@ -83,72 +74,56 @@
   background: transparent;
   border: none;
   outline: none;
-  font-size: 0.95rem;
-  color: #1e293b;
+  font-size: 1rem;
 }
 
 .signup-btn {
   width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  padding: 16px;
+  background-color: #1e3a8a; 
   color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
-  margin-top: 5px;
+  margin-top: 10px;
+  transition:  0.3s;
 }
 
 .signup-btn:hover {
-  background: linear-gradient(135deg, #2563eb, #172e6e);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.3);
+  background-color: #4c6ef5;
 }
-
-.back-button {
+.back-button{
   position: absolute;
-  top: 30px;
-  left: 30px;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  padding: 10px 18px;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
   cursor: pointer;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  color: #1e3a8a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
 }
 
 .back-button:hover {
-  background-color: #1e3a8a;
-  color: #ffffff;
-  border-color: #1e3a8a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+  background-color: #3b5998; /* Fills the button with blue */
+  color: white;              /* Changes text to white so it's readable */
+  border-color: #3b5998;     /* Keeps the border the same blue */
 }
 
 .signup-footer {
-  margin-top: 1.2rem;
+  margin-top: 25px;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #666;
 }
 
 .signup-footer span {
-  color: #3b82f6;
-  font-weight: 600;
+  color: #5c7cfa;
+  font-weight: bold;
   cursor: pointer;
-  transition: color 0.2s;
-}
-
-.signup-footer span:hover {
-  color: #1e3a8a;
-  text-decoration: underline;
 }
