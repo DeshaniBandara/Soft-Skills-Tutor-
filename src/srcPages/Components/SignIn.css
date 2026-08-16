@@ -1,4 +1,3 @@
-/* === Container === */
 .signin-container {
   min-height: 100vh;
   display: flex;
@@ -7,70 +6,103 @@
   background: #f5f7fb;
 }
 
-/* === Card === */
 .signin-card {
   background: #ffffff;
   padding: 2.5rem;
-  width: 380px;
-  max-width: 92%;
-  border-radius: 20px;
+  width: 360px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* === Logo === */
 .signin-logo {
   width: 120px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .signin-card h2 {
-  color: #1e293b;
-  font-size: 1.6rem;
   margin-bottom: 1.5rem;
 }
 
-/* ✅ GOOGLE BRAND COLORS BUTTON */
 .google-btn {
   width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: 1px solid #dadce0;
-  background: #ffffff;
-  color: #3c4043;
-  font-weight: 500;
-  font-size: 15px;
-  font-family: 'Google Sans', 'Roboto', system-ui, sans-serif;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transition: all 0.25s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  font-weight: 500;
 }
 
-.google-btn:hover {
-  background: #f8f9fa;
-  border-color: #dadce0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
-}
-
-.google-btn:active {
-  background: #f1f3f4;
-  transform: scale(0.98);
-}
-
-/* Google "G" Icon */
 .google-icon {
-  font-weight: 700;
-  font-size: 20px;
-  color: #4285f4;                    /* Google Blue */
-  background: #ffffff;
-  padding: 0 4px;
+  font-weight: bold;
+  margin-right: 8px;
+  color: #1e3a8a;
 }
 
-/* === Divider === */
+.or-text {
+  margin: 1rem 0;
+  color: #777;
+}
+
+.signin-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #e0e0e0;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1e3a8a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #4c6ef5;
+}
+
+.reset {
+  margin-top: 1rem;
+  color: #5a7bea;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 0.5rem;
+}
+
+.signup span {
+  color: #5a7bea;
+  cursor: pointer;
+}
+.back-btn {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background: none;
+  border: 1px solid #3b5998;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+  color: #3b5998;
+  background-color: transparent;
+  
+}
+
+.back-btn:hover {
+  background-color: #3b5998; /* Fills the button with blue */
+  color: white;              /* Changes text to white so it's readable */
+  border-color: #3b5998;     /* Keeps the border the same blue */
+}
 .or-divider {
   display: flex;
   align-items: center;
@@ -82,144 +114,13 @@
 .or-divider .line {
   flex: 1;
   height: 1px;
-  background-color: #e5e7eb;
+  background-color: #dbdbdb; /* Color of the horizontal lines */
 }
 
 .or-divider .or-text {
-  margin: 0 14px;
-  color: #9ca3af;
-  font-size: 13px;
+  margin: 0 10px;
+  color: #8e8e8e;
+  font-size: 14px;
   font-weight: 500;
   text-transform: lowercase;
-}
-
-/* === Input Fields === */
-.input-group {
-  text-align: left;
-  margin-bottom: 16px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 5px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #f9fafb;
-  font-size: 15px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.input-group input:focus {
-  border-color: #4285f4;             /* Google Blue */
-  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
-}
-
-/* === Login Button === */
-.login-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  background: #1e3a8a;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 8px;
-}
-
-.login-btn:hover {
-  background: #3b82f6;
-  transform: translateY(-2px);
-}
-
-.login-btn:active {
-  transform: scale(0.98);
-}
-
-.login-btn:disabled {
-  background: #94a3b8;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* === Links === */
-.reset-link {
-  display: inline-block;
-  margin-top: 16px;
-  color: #6b7280;
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.reset-link:hover {
-  color: #4285f4;                    /* Google Blue on hover */
-}
-
-.signup-text {
-  margin-top: 16px;
-  color: #6b7280;
-  font-size: 14px;
-}
-
-.signup-text span {
-  color: #4285f4;                    /* Google Blue */
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.signup-text span:hover {
-  color: #1e3a8a;
-}
-
-/* === Back Button === */
-.back-btn {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  background: none;
-  border: 1px solid #d1d5db;
-  padding: 8px 18px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: all 0.3s;
-  color: #374151;
-  background-color: transparent;
-}
-
-.back-btn:hover {
-  background-color: #1e3a8a;
-  color: white;
-  border-color: #1e3a8a;
-}
-
-/* === Responsive === */
-@media (max-width: 480px) {
-  .signin-card {
-    padding: 1.8rem;
-    width: 100%;
-  }
-  .signin-card h2 {
-    font-size: 1.3rem;
-  }
-  .back-btn {
-    top: 16px;
-    left: 16px;
-    padding: 6px 14px;
-    font-size: 12px;
-  }
 }

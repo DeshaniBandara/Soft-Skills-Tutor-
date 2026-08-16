@@ -16,7 +16,7 @@ function ResetPassword() {
     setLoading(true);
 
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: 'https://soft-skills-tutor.vercel.app/update-password', // ✅ Vercel URL
+      redirectTo: 'https://soft-skills-tutor.vercel.app/Soft-Skills-Tutor-/update-password', // ✅ Vercel URL
     });
 
     if (error) {
