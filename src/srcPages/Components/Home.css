@@ -1,23 +1,34 @@
-*.welcome-section {
+/* === Welcome Section === */
+.welcome-section {
   text-align: center;
-  padding: 10px 10px;
+  padding: 60px 20px 30px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
 }
 
 .welcome-section h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--brand-dark);
   margin-bottom: 10px;
 }
 
-.welcome-section p {
-  font-size: 1.1rem;
-  color: #444;
+.welcome-section h1 span {
+  color: var(--brand-light-blue);
 }
 
-/* Banner styles */
+.welcome-section p {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Hero Section === */
 .hero-section {
   position: relative;
   width: 100%;
   height: 70vh;
+  min-height: 400px;
   overflow: hidden;
 }
 
@@ -32,28 +43,45 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.45);
-  padding: 25px 35px;
-  border-radius: 12px;
+  background: rgba(10, 25, 47, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 40px 50px;
+  border-radius: 20px;
   color: white;
   text-align: center;
+  max-width: 700px;
+  width: 90%;
 }
 
 .hero-text h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 5px;
 }
 
-.hero-text h2 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+.hero-text h1:last-of-type {
+  color: var(--brand-light-blue);
 }
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: 2rem; }
+  .welcome-section h1 { font-size: 2.2rem; }
+}
+
 @media (max-width: 768px) {
-  .welcome-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-banner {
-    max-height: 300px;
-  }
+  .hero-section { height: 50vh; min-height: 300px; }
+  .hero-text { padding: 25px 30px; }
+  .hero-text h1 { font-size: 1.6rem; }
+  .welcome-section { padding: 40px 15px; }
+  .welcome-section h1 { font-size: 1.8rem; }
+  .welcome-section p { font-size: 1rem; }
 }
 
+@media (max-width: 480px) {
+  .hero-section { height: 40vh; min-height: 250px; }
+  .hero-text { padding: 15px 20px; }
+  .hero-text h1 { font-size: 1.2rem; }
+  .welcome-section h1 { font-size: 1.5rem; }
+}

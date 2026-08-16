@@ -1,15 +1,29 @@
+/* === Header === */
 .list-header h1 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--brand-dark);
   margin-bottom: 30px;
   font-weight: 800;
-  text-align: center; /* Centers the title as seen in Screenshot 968 */
+  text-align: center;
 }
-/* Update this in your CSS file */
-.nav-title span, 
+
+.list-header h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--brand-light-blue), var(--brand-purple));
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === Brand Title === */
+.nav-title span,
 .explore-brand h3 span {
-    color: #1e3a8a !important; /* This is the specific deep blue you requested */
+  color: var(--brand-blue) !important;
 }
+
+/* === Lesson Item === */
 .lesson-item-row {
   display: flex;
   justify-content: space-between;
@@ -17,15 +31,45 @@
   width: 100%;
   padding: 20px 30px;
   background: white;
-  border: 1px solid #000; /* Matching the dark border in Screenshot 968 */
-  border-radius: 12px;
-  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .lesson-item-row:hover {
   background: #f8fafc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.08);
+  border-color: var(--brand-light-blue);
+}
+
+.lesson-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.lesson-icon-wrap {
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.lesson-item-row:hover .lesson-icon-wrap {
+  color: var(--brand-light-blue);
+  transform: scale(1.15);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .list-header h1 { font-size: 1.8rem; }
+  .lesson-item-row { padding: 16px 20px; }
+  .lesson-text { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .list-header h1 { font-size: 1.4rem; }
+  .lesson-item-row { padding: 14px 16px; }
+  .lesson-text { font-size: 0.9rem; }
 }

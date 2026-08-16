@@ -1,12 +1,13 @@
+/* === Container === */
 .lesson-view-container {
   min-height: 100vh;
   background: #ffffff;
 }
 
-/* Header using your brand deep blue */
+/* === Header === */
 .lesson-banner-blue {
-  background-color: #1e3a8a;
-  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-purple));
+  padding: 50px 20px 40px;
   text-align: center;
   color: white;
   position: relative;
@@ -16,40 +17,55 @@
   position: absolute;
   left: 5%;
   top: 45px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 8px 18px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
+.lesson-back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lesson-banner-blue h1 {
+  font-size: 2.2rem;
+  color: white;
+  margin: 0;
+}
+
+/* === Content === */
 .lesson-stepper-body {
   max-width: 900px;
-  margin: 40px auto; /* Centered container but internal content is left-aligned */
+  margin: 40px auto;
   padding: 0 20px;
   position: relative;
 }
 
-/* Vertical timeline line */
+/* Timeline Line */
 .stepper-line {
   position: absolute;
-  left: 40px; 
+  left: 40px;
   top: 10px;
   bottom: 180px;
-  width: 2px;
-  background: #1e3a8a;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--brand-blue), var(--brand-purple));
   z-index: 0;
+  border-radius: 2px;
 }
 
+/* Step Row */
 .step-row {
   display: flex;
-  align-items: flex-start; /* Aligns text to the top of the circle */
+  align-items: flex-start;
   gap: 25px;
-  margin-bottom: 25px; /* Tightened spacing */
+  margin-bottom: 25px;
   position: relative;
   z-index: 1;
 }
@@ -57,7 +73,7 @@
 .step-number {
   min-width: 42px;
   height: 42px;
-  background-color: #1e3a8a; /* Deep blue circles */
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-purple));
   color: white;
   border-radius: 50%;
   display: flex;
@@ -68,20 +84,20 @@
 }
 
 .step-info {
-  text-align: left; /* Explicit left alignment */
+  text-align: left;
 }
 
 .step-info h3 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #1e293b;
-  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--brand-dark);
+  font-weight: 700;
 }
 
 .step-info p {
-  color: #475569;
-  line-height: 1.4;
-  margin-top: 5px; /* Tighter gap between title and text */
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-top: 5px;
 }
 
 .step-list {
@@ -91,49 +107,74 @@
 }
 
 .step-list li {
-  color: #475569;
-  margin-bottom: 3px; /* Minimal space between bullets */
+  color: var(--text-gray);
+  margin-bottom: 4px;
+  line-height: 1.5;
 }
 
+/* === Quote === */
 .lesson-quote-container {
   text-align: center;
-  margin: 40px 0;
+  margin: 50px 0 40px;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border-left: 4px solid var(--brand-light-blue);
 }
 
 .lesson-quote {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   font-style: italic;
+  color: var(--brand-dark);
   margin: 0;
 }
 
 .quote-author {
   display: block;
-  color: #64748b;
-  margin-top: 5px;
+  color: var(--text-gray);
+  margin-top: 8px;
+  font-weight: 500;
 }
 
+/* === Footer Action === */
 .footer-action {
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
+  padding: 20px 0 60px;
 }
 
-/* Practice button in deep blue */
 .practice-mcq-btn {
-  background-color: #1e3a8a;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-purple));
   color: white;
   border: none;
-  padding: 15px 45px;
-  border-radius: 12px;
+  padding: 16px 45px;
+  border-radius: 14px;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
-  transition: transform 0.2s;
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .practice-mcq-btn:hover {
-  transform: translateY(-2px);
-  background-color: #172e6e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.35);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .lesson-banner-blue h1 { font-size: 1.6rem; }
+  .step-number { min-width: 36px; height: 36px; font-size: 0.9rem; }
+  .step-info h3 { font-size: 1.2rem; }
+  .stepper-line { left: 34px; }
+  .lesson-quote { font-size: 1.1rem; }
+  .practice-mcq-btn { padding: 14px 30px; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .lesson-banner-blue h1 { font-size: 1.2rem; }
+  .step-row { gap: 15px; }
+  .step-info h3 { font-size: 1rem; }
+  .stepper-line { left: 30px; }
 }
