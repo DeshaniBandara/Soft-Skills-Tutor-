@@ -1,10 +1,18 @@
-/* === About Section Container === */
+/* === Animated About Section Container === */
 .about-section {
   padding: 5rem 5%;
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #f8fafc, #eff6ff);
+  background-size: 300% 300%;
+  animation: aboutColorShift 12s ease infinite;
   color: #1a1a1a;
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   text-align: center;
+}
+
+@keyframes aboutColorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* === Headings === */
@@ -47,7 +55,8 @@
 }
 
 .feature-card {
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
   padding: 2.5rem 1.8rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -57,8 +66,9 @@
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.08);
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.12);
   border-color: #3b82f6;
+  background: #ffffff;
 }
 
 .feature-card h4 {
@@ -120,6 +130,12 @@
   color: #3b82f6;
   font-weight: bold;
   font-size: 1.2rem;
+  animation: pulseGlow 2s ease infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
 }
 
 .values ul li p {
