@@ -11,8 +11,9 @@ function Dashboard() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [newDisplayName, setNewDisplayName] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true); // ✅ Added loading state
 
-  // --- NEW STATE FOR TRACKING ---
+  // --- STATE FOR TRACKING ---
   const [userStats, setUserStats] = useState({
     overall: "0%",
     activities: "0%",
@@ -21,57 +22,89 @@ function Dashboard() {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetchUserData();
-    fetchProgressData(); // Fetch real progress
-    fetchHistory();      // Fetch real history
-  }, [navigate]);
+    const initializeDashboard = async () => {
+      setIsCheckingAuth(true);
+      await fetchUserData();
+      await fetchProgressData();
+      await fetchHistory();
+      setIsCheckingAuth(false);
+    };
+    
+    initializeDashboard();
+  }, []); // ✅ Empty dependency array - runs once on mount
 
   const fetchUserData = async () => {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (user) {
-      const name = user.user_metadata?.full_name || user.email.split('@')[0];
-      setUserName(name);
-      setNewDisplayName(name);
-    } else {
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        // ✅ Fixed: Safe email access with fallback
+        const email = user.email || '';
+        const name = user.user_metadata?.full_name || email.split('@')[0] || 'User';
+        setUserName(name);
+        setNewDisplayName(name);
+      } else {
+        navigate('/signin');
+      }
+    } catch (error) {
+      console.error("Error fetching user:", error);
       navigate('/signin');
     }
   };
 
   // --- FETCH PROGRESS DATA ---
   const fetchProgressData = async () => {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
 
-    // Logic: Fetch count of completed lessons/activities from your Supabase tables
-    // For now, this mimics a successful fetch. 
-    // You will replace these with actual supabase select counts.
-    setUserStats({
-      overall: "75%", 
-      activities: "80%",
-      accuracy: "92%"
-    });
+      // Replace with actual Supabase queries
+      setUserStats({
+        overall: "75%", 
+        activities: "80%",
+        accuracy: "92%"
+      });
+    } catch (error) {
+      console.error("Error fetching progress:", error);
+    }
   };
 
   // --- FETCH RECENT HISTORY ---
   const fetchHistory = async () => {
-    // In a real app: const { data } = await supabase.from('activity_log').select('*').limit(3);
-    const mockHistory = [
-      { id: 1, text: "Completed Emotional Intelligence", time: "2h ago" },
-      { id: 2, text: "AI Analysis: Speech Clarity improved", time: "Yesterday" }
-    ];
-    setHistory(mockHistory);
+    try {
+      // Replace with actual Supabase queries
+      const mockHistory = [
+        { id: 1, text: "Completed Emotional Intelligence", time: "2h ago" },
+        { id: 2, text: "AI Analysis: Speech Clarity improved", time: "Yesterday" }
+      ];
+      setHistory(mockHistory);
+    } catch (error) {
+      console.error("Error fetching history:", error);
+    }
   };
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await supabase.auth.updateUser({ data: { full_name: newDisplayName } });
-    if (!error) {
-      setUserName(newDisplayName);
-      setIsEditModalOpen(false);
+    try {
+      const { error } = await supabase.auth.updateUser({ data: { full_name: newDisplayName } });
+      if (!error) {
+        setUserName(newDisplayName);
+        setIsEditModalOpen(false);
+      }
+    } catch (error) {
+      console.error("Error updating profile:", error);
     }
     setLoading(false);
   };
+
+  // ✅ Show loading state while checking authentication
+  if (isCheckingAuth) {
+    return (
+      <div className="dashboard-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <h2>Loading Dashboard...</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard-container">
