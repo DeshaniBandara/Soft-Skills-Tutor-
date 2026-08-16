@@ -11,7 +11,8 @@ const ChatBot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const scrollRef = useRef(null);
 
-    const API_KEY = "AIzaSyDj12dj84H2sUjMDQQCphUtVzcFFyBHyXA"; // Replace with your active key
+    // ✅ API Key .env එකෙන් ගන්න
+    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(API_KEY);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const ChatBot = () => {
         try {
             const model = genAI.getGenerativeModel({ 
                 model: "gemini-3-flash-preview",
-                systemInstruction: "You are the AI Assistant for SoftSkills Tutor. Mission: Make soft skills engaging. Vision: Global learning space for children. Values: Growth, Confidence, Creativity, Safety, Support. Help users with communication, leadership, and teamwork." // Integrated from
+                systemInstruction: "You are the AI Assistant for SoftSkills Tutor. Mission: Make soft skills engaging. Vision: Global learning space for children. Values: Growth, Confidence, Creativity, Safety, Support. Help users with communication, leadership, and teamwork."
             });
 
             const result = await model.generateContent(input);

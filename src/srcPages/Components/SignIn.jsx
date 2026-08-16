@@ -42,16 +42,11 @@ function SignIn() {
 
   return (
     <div className="signin-container">
-      <button 
-        onClick={() => navigate("/")} 
-        className="back-btn"
-      >
+      <button onClick={() => navigate("/")} className="back-btn">
         ← Go Back
       </button>
       <div className="signin-card">
-        
         <img src={logo} alt="SoftSkillsTutor Logo" className="signin-logo" />
-
         <h2>Sign in to SoftSkillsTutor</h2>
 
         <button className="google-btn" onClick={handleGoogleSignIn} type="button">
@@ -67,7 +62,7 @@ function SignIn() {
 
         <form onSubmit={handleSignIn}>
           <div className="input-group">
-            <label><Mail size={14} />  Email</label>
+            <label><Mail size={14} /> Email</label>
             <input 
               type="email" 
               placeholder="Enter your email" 
@@ -78,7 +73,7 @@ function SignIn() {
           </div>
         
           <div className="input-group">
-            <label><Lock size={14}/>  Password</label>
+            <label><Lock size={14}/> Password</label>
             <div style={{ position: 'relative' }}>
               <input 
                 type={showPassword ? "text" : "password"} 
