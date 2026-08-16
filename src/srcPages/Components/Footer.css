@@ -1,12 +1,148 @@
-.footer-link-btn {
+/* === Footer Container === */
+.footer {
+  background-color: #0a192f;
+  color: #ccd6f6;
+  padding: 3rem 5% 1rem;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-box h3,
+.contact-details h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.footer-box h3::after,
+.contact-details h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #4f8cf7;
+  margin-top: 8px;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #a8b2d1;
+}
+
+/* ✅ THIS FIXES THE FONT AND STYLE FOR THE <a> TAGS IN FOOTER */
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-box ul li a {
+  color: #a8b2d1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  font-family: inherit;
   background: none;
   border: none;
-  color: inherit;
   cursor: pointer;
-  font: inherit;
   padding: 0;
-  text-decoration: none;
+  display: inline-block;
 }
-.footer-link-btn:hover {
-  color: #646cff; /* Or your preferred hover color */
+
+.footer-box ul li a:hover {
+  color: #4f8cf7;
+  padding-left: 5px;
+}
+
+/* === Contact Details === */
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #a8b2d1;
+  margin-bottom: 0.8rem;
+}
+
+.contact-icon {
+  color: #4f8cf7;
+  min-width: 18px;
+}
+
+/* === Policy Links === */
+.footer-policy {
+  margin-top: 1.5rem;
+}
+
+.footer-policy .footer-link {
+  color: #a8b2d1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  font-family: inherit;
+}
+
+.footer-policy .footer-link:hover {
+  color: #4f8cf7;
+}
+
+/* === Social Icons === */
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer-icons span {
+  color: #a8b2d1;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-icons span:hover {
+  color: #4f8cf7;
+  transform: translateY(-3px);
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #1e2d4f;
+  font-size: 0.85rem;
+  color: #495670;
+}
+
+/* === Responsive Footer === */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer {
+    padding: 2rem 5%;
+  }
 }
