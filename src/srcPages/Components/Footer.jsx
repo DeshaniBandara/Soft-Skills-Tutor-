@@ -3,7 +3,8 @@ import { Mail, Globe, MapPin, Phone, Instagram, Facebook, Linkedin, Youtube } fr
 import { Link } from 'react-router-dom';
 
 function Footer() {
-  const handleScroll = (id) => {
+  const handleScroll = (e, id) => {
+    e.preventDefault(); // ✅ Added this to prevent page reload
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -14,6 +15,7 @@ function Footer() {
     <footer id="contact" className="footer">
       <div className="footer-container">
 
+        {/* Left section */}
         <div className="footer-box">
           <h3>SoftSkillsTutor</h3>
           <p>
@@ -22,15 +24,16 @@ function Footer() {
           </p>
         </div>
 
+        {/* Middle section */}
         <div className="footer-box">
           <h3>Links</h3>
           <ul>
-            {/* ✅ Changed <a> to <button> */}
-            <li><button type="button" className="footer-link-btn" onClick={() => handleScroll("home")}>Home</button></li>
-            <li><button type="button" className="footer-link-btn" onClick={() => handleScroll("about")}>About Us</button></li>
+            {/* ✅ Reverted back to <a> tags to keep original font and styling */}
+            <li><a href="#home" onClick={(e) => handleScroll(e, "home")}>Home</a></li>
+            <li><a href="#about" onClick={(e) => handleScroll(e, "about")}>About Us</a></li>
             <li><Link to="/download" className="nav-link">Download Resources</Link></li>
             <li><Link to="/signin">Login</Link></li>
-            <li><button type="button" className="footer-link-btn" onClick={() => handleScroll("contact")}>Contact</button></li>
+            <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")}>Contact</a></li>
           </ul>
 
           <div className="footer-policy">
