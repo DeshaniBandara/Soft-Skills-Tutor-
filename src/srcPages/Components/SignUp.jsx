@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react'; // Added Eye and EyeOff
 import { supabase } from "./supabaseClient";
 import './SignUp.css';
-import logo from "../../assets/logo.png";  // 🔴 Fix update import logo from "../../assets/logo.png"; error
+import logo from "../../assets/logo.png";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // New state for toggle
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,14 +72,14 @@ function SignUp() {
 
           <div className="input-field">
             <label><Lock size={16} /> Password</label>
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative' }}> {/* Wrapper for icon positioning */}
               <input 
                 type={showPassword ? "text" : "password"} 
                 placeholder="Enter your password" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required 
-                style={{ width: '100%', paddingRight: '40px' }}
+                style={{ width: '100%', paddingRight: '40px' }} // Space for the eye icon
               />
               <button 
                 type="button"
