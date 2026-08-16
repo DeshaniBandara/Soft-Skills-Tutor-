@@ -79,11 +79,12 @@
   margin-bottom: 0.8rem;
 }
 
-.feature-card p {
-  font-size: 0.95rem;
-  color: #475569;
-  text-align: center;
-  margin: 0;
+
+.feature-card {
+  background: rgb(168, 200, 235);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* === Mission, Vision, Values Container === */
