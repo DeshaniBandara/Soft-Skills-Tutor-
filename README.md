@@ -1,13 +1,6 @@
 <img width="1903" height="927" alt="Capture" src="https://github.com/user-attachments/assets/318fe7d7-70e6-45bc-8ea2-bcef3d42d7f7" />
 
 
-
-Here is a **complete, professional `README.md` file** in **English**, combining all the details about your app, the setup instructions, the React + Vite configuration notes, and the **credit/acknowledgment** section for **Jayasankha-dev**.
-
-You can copy and paste this entire content directly into your `README.md` file.
-
----
-
 ```markdown
 # 🧠 SoftSkillsTutor
 
