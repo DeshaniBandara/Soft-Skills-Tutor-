@@ -11,7 +11,6 @@ const ChatBot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const scrollRef = useRef(null);
 
-    // ✅ Read from .env (Vercel will use its own env variables)
     const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(API_KEY);
 
@@ -29,19 +28,15 @@ const ChatBot = () => {
 
         try {
             const model = genAI.getGenerativeModel({ 
-                model: "gemini-1.5-flash",
-                systemInstruction: "You are the AI Assistant for SoftSkills Tutor. Mission: Make soft skills engaging. Vision: Global learning space for children. Values: Growth, Confidence, Creativity, Safety, Support. Help users with communication, leadership, and teamwork."
+                model: "gemini-3-flash-preview",
+                systemInstruction: "You are the AI Assistant for SoftSkills Tutor. Mission: Make soft skills engaging. Vision: Global learning space for children. Values: Growth, Confidence, Creativity, Safety, Support. Help users with communication, leadership, and teamwork." // Integrated from
             });
 
             const result = await model.generateContent(input);
             const response = await result.response;
             setMessages(prev => [...prev, { role: 'bot', text: response.text() }]);
         } catch (error) {
-            console.error("Gemini API Error:", error);
-            setMessages(prev => [...prev, { 
-                role: 'bot', 
-                text: `⚠️ Error: ${error.message || "Please try again later."}` 
-            }]);
+            setMessages(prev => [...prev, { role: 'bot', text: "Sorry, I'm having trouble connecting." }]);
         } finally {
             setIsTyping(false);
         }
