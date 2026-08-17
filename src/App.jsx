@@ -36,8 +36,8 @@ import ChatBot from './srcPages/Components/ChatBot';
 import "./App.css";
 
 function App() {
+  // ✅ Added basename to match Vite's base path
   return (
-    {/* ✅ Add basename to match Vite's base path */}
     <Router basename="/Soft-Skills-Tutor-">
       {/* ChatBot is displayed on every page */}
       <ChatBot />
