@@ -22,29 +22,6 @@
   margin-bottom: 1.5rem;
 }
 
-/*.back-button {
-  position: absolute;
-  top: 300px;
-  left: 300px;
-  background: none;
-  border: 1px solid #3b5998;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: 0.3s;
-  color: #3b5998;
-  background-color: transparent;
-  
-}
-
-.back-button:hover {
-  background-color: #3b5998; 
-  color: white;              
-  border-color: #3b5998;    
-}*/
-
-
 .signup-subtitle {
   color: #666;
   margin-bottom: 30px;
@@ -53,7 +30,7 @@
 
 .input-field {
   text-align: left;
-  background: #f0f0f0; /* The light gray from your screenshot */
+  background: #f0f0f0;
   padding: 12px 18px;
   border-radius: 14px;
   margin-bottom: 15px;
@@ -69,13 +46,22 @@
   margin-bottom: 4px;
 }
 
+/* ===== [NEW] Added section ===== */
+/* Makes input text black for better visibility */
 .input-field input {
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 1rem;
+  color: #1a1a1a; /* ✅ Black text */
 }
+
+/* Makes placeholder text visible (dark gray instead of white) */
+.input-field input::placeholder {
+  color: #888; /* ✅ Dark gray placeholder */
+}
+/* ===== [NEW] End of added section ===== */
 
 .signup-btn {
   width: 100%;
@@ -94,7 +80,8 @@
 .signup-btn:hover {
   background-color: #4c6ef5;
 }
-.back-button{
+
+.back-button {
   position: absolute;
   top: 300px;
   left: 300px;
@@ -107,13 +94,12 @@
   transition: 0.3s;
   color: #3b5998;
   background-color: transparent;
-  
 }
 
 .back-button:hover {
-  background-color: #3b5998; /* Fills the button with blue */
-  color: white;              /* Changes text to white so it's readable */
-  border-color: #3b5998;     /* Keeps the border the same blue */
+  background-color: #3b5998;
+  color: white;
+  border-color: #3b5998;
 }
 
 .signup-footer {
