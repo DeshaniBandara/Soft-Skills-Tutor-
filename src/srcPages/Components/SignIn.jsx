@@ -16,7 +16,7 @@ function SignIn() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'https://soft-skills-tutor.vercel.app/dashboard',		
+        redirectTo: 'https://soft-skills-tutor.vercel.app/Soft-Skills-Tutor-/dashboard',		
       },
     });
     if (error) alert(error.message);
