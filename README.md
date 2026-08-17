@@ -4,7 +4,8 @@
 ```markdown
 # 🧠 SoftSkillsTutor
 
-**SoftSkillsTutor** is an AI-powered interactive learning platform designed to help young learners build essential soft skills for school, work, and life.
+**SoftSkillsTutor** is an AI-powered interactive learning platform designed to help young learners
+build essential soft skills for school, work, and life.
 
 Students can practice communication, teamwork, leadership, problem-solving, confidence, and creativity through structured lessons, engaging activities, and quizzes. The platform uses AI to provide instant feedback on video submissions, making learning personalized and effective.
 
