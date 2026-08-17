@@ -11,8 +11,8 @@ const ChatBot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const scrollRef = useRef(null);
 
-    // Get API key from .env (with a fallback for local testing)
-    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyDj12dj84H2sUjMDQQCphUtVzcFFyBHyXA";
+    // ✅ Read from .env (Vercel will use its own env variables)
+    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(API_KEY);
 
     useEffect(() => {
@@ -28,7 +28,6 @@ const ChatBot = () => {
         setIsTyping(true);
 
         try {
-            // Correct model name (gemini-1.5-flash is widely available)
             const model = genAI.getGenerativeModel({ 
                 model: "gemini-1.5-flash",
                 systemInstruction: "You are the AI Assistant for SoftSkills Tutor. Mission: Make soft skills engaging. Vision: Global learning space for children. Values: Growth, Confidence, Creativity, Safety, Support. Help users with communication, leadership, and teamwork."
@@ -39,10 +38,9 @@ const ChatBot = () => {
             setMessages(prev => [...prev, { role: 'bot', text: response.text() }]);
         } catch (error) {
             console.error("Gemini API Error:", error);
-            // Better error message for users
             setMessages(prev => [...prev, { 
                 role: 'bot', 
-                text: "⚠️ I'm having trouble connecting. Please check your API key or try again later." 
+                text: `⚠️ Error: ${error.message || "Please try again later."}` 
             }]);
         } finally {
             setIsTyping(false);
