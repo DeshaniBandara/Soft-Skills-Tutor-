@@ -1,7 +1,6 @@
 <img width="1903" height="927" alt="Capture" src="https://github.com/user-attachments/assets/318fe7d7-70e6-45bc-8ea2-bcef3d42d7f7" />
 
 
-```markdown
 # 🧠 SoftSkillsTutor
 
 **SoftSkillsTutor** is an AI-powered interactive learning platform designed to help young learners
@@ -40,7 +39,7 @@ Check out the live application:
 - **Icons:** Lucide React
 - **Deployment:** Vercel
 
----
+```bash
 
 ## 📁 Project Structure
 
