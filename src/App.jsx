@@ -37,17 +37,24 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    {/* ✅ Add basename to match Vite's base path */}
+    <Router basename="/Soft-Skills-Tutor-">
+      {/* ChatBot is displayed on every page */}
       <ChatBot />
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/update-password" element={<UpdatePassword />} />
+        
+        {/* Protected Routes (Dashboard and Features) */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/explore-lessons" element={<ExploreLessons />} />
         <Route path="/guided-activities" element={<GuidedActivities />} />
+        
+        {/* Lesson Routes */}
         <Route path="/communication-skills" element={<CommunicationSkillsLesson />} />
         <Route path="/teamwork-collaboration" element={<TeamworkLesson />} />
         <Route path="/time-management" element={<TimeManagementLesson />} />
@@ -55,6 +62,8 @@ function App() {
         <Route path="/emotional-intelligence" element={<EmotionalIntelligence />} />
         <Route path="/problem-solving-critical-thinking" element={<ProblemSolving />} />
         <Route path="/confidence-self-management" element={<ConfidenceLesson />} />
+        
+        {/* Activity Routes */}
         <Route path="/activity/communication-skills" element={<CommActivity />} />
         <Route path="/activity/teamwork-collaboration" element={<TeamworkActivity />} />
         <Route path="/activity/leadership-skills" element={<LeadershipActivities/>} />
@@ -62,6 +71,8 @@ function App() {
         <Route path="/activity/emotional-intelligence" element={<EmotionalIntelligenceAc/>} />
         <Route path="/activity/problem-solving-critical-thinking" element={<ProblemSolvingAc/>} />
         <Route path="/activity/confidence-self-management" element={<ConfidenceAndSelfManagementAc/>} />
+        
+        {/* Quiz Routes */}
         <Route path="/quiz/communication-skills" element={<QuizCommunicationComponent />} />
         <Route path="/quiz/teamwork-collaboration" element={<QuizTeamworkComponent />} />
         <Route path="/quiz/leadership-skills" element={<QuizLeadershipComponent />} />
@@ -69,6 +80,8 @@ function App() {
         <Route path="/quiz/emotional-intelligence" element={<QuizEmotionalIntelligenceComponent />} />
         <Route path="/quiz/problem-solving-critical-thinking" element={<QuizProblemSolvingComponent />} />
         <Route path="/quiz/confidence-self-management" element={<QuizConfidenceComponent />} />
+        
+        {/* Additional Features */}
         <Route path="/ai-skill-feedback" element={<VideoUploadPage />} />
         <Route path="/download" element={<DownloadPage />} />
         <Route path="/guidance" element={<GuidancePage />} />
