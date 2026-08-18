@@ -1,15 +1,16 @@
 .list-header h1 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: #0a192f;  /* ✅ Dark Text */
   margin-bottom: 30px;
   font-weight: 800;
-  text-align: center; /* Centers the title as seen in Screenshot 968 */
+  text-align: center;
 }
-/* Update this in your CSS file */
-.nav-title span, 
+
+.nav-title span,
 .explore-brand h3 span {
-    color: #1e3a8a !important; /* This is the specific deep blue you requested */
+  color: #1e3a8a !important;
 }
+
 .lesson-item-row {
   display: flex;
   justify-content: space-between;
@@ -17,7 +18,7 @@
   width: 100%;
   padding: 20px 30px;
   background: white;
-  border: 1px solid #000; /* Matching the dark border in Screenshot 968 */
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   margin-bottom: 15px;
   cursor: pointer;
@@ -27,5 +28,11 @@
 .lesson-item-row:hover {
   background: #f8fafc;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-text {
+  color: #1a1a2e;  /* ✅ Dark Text */
+  font-weight: 600;
+  font-size: 1.1rem;
 }
