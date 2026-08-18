@@ -17,22 +17,16 @@
   will-change: filter;
   transition: filter 300ms;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -50,54 +44,118 @@
   max-width: 600px;
   background: #f9f9f9;
   border-radius: 8px;
-  color: #1a1a1a; /* ✅ Black text */
+  color: #1e293b;
 }
 
 /* ============================================
    DOCS LINK
    ============================================ */
 .read-the-docs {
-  color: #1a1a1a; /* ✅ Black text (was #888) */
+  color: #64748b;
 }
 
 /* ============================================
-   HEADINGS - ALL BLACK
+   HEADINGS - Brand Color Theme
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
-  color: #1a1a1a; /* ✅ Black text */
+h1 {
+  color: #0a192f;
+  font-weight: 700;
+}
+
+h2 {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+h3 {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  color: #334155;
+  font-weight: 500;
 }
 
 /* ============================================
-   PARAGRAPHS - ALL BLACK
+   PARAGRAPHS
    ============================================ */
 p {
-  color: #1a1a1a; /* ✅ Black text */
+  color: #475569;
+  line-height: 1.7;
 }
 
 /* ============================================
-   LINKS - BLACK WITH HOVER
+   LINKS - Brand Blue
    ============================================ */
 a {
-  color: #1a1a1a; /* ✅ Black text */
+  color: #1e3a8a;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #1e3a8a; /* Blue on hover */
+  color: #3b82f6;
+  text-decoration: underline;
 }
 
 /* ============================================
-   BUTTONS
+   BUTTONS - Brand Blue
    ============================================ */
 button {
-  color: #1a1a1a; /* ✅ Black text */
+  color: #ffffff;
+  background-color: #1e3a8a;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* ============================================
    LISTS
    ============================================ */
-ul, ol, li {
-  color: #1a1a1a; /* ✅ Black text */
+ul, ol {
+  color: #475569;
+}
+
+li {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   INPUT FIELDS
+   ============================================ */
+input, textarea, select {
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #1e3a8a;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #94a3b8;
 }
 
 /* ============================================
@@ -134,32 +192,47 @@ ul, ol, li {
   }
   h1 {
     font-size: 1.5rem;
-    color: #1a1a1a; /* ✅ Black */
   }
   p {
     font-size: 0.9rem;
-    color: #1a1a1a; /* ✅ Black */
   }
 }
 
 /* ============================================
-   CSS VARIABLES (BRAND COLORS)
+   CSS VARIABLES (Brand Colors)
    ============================================ */
 :root {
   --brand-blue: #1e3a8a;
+  --brand-light: #3b82f6;
+  --brand-dark: #0a192f;
+  --text-dark: #1e293b;
+  --text-gray: #475569;
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --border-color: #e2e8f0;
 }
 
-/* Brand blue for specific elements */
+/* Brand elements */
 .nav-title span {
   color: var(--brand-blue);
 }
 
 .mcq-button {
   background-color: var(--brand-blue);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mcq-button:hover {
+  background-color: var(--brand-light);
 }
 
 /* ============================================
-   DOWNLOAD PAGE FIXES (PDF Grid)
+   DOWNLOAD PAGE FIXES
    ============================================ */
 @media (max-width: 850px) {
   .resource-grid {
@@ -173,7 +246,7 @@ ul, ol, li {
 
   .download-header h1 {
     font-size: 2rem !important;
-    color: #1a1a1a; /* ✅ Black */
+    color: #1e3a8a;
   }
 
   .card-frame {
@@ -182,25 +255,11 @@ ul, ol, li {
 }
 
 /* ============================================
-   RESOURCE CARD TEXT - BLACK
-   ============================================ */
-.resource-card h3 {
-  color: #1a1a1a; /* ✅ Black */
-}
-
-.resource-card p {
-  color: #1a1a1a; /* ✅ Black */
-}
-
-.download-header p {
-  color: #1a1a1a; /* ✅ Black */
-}
-
-/* ============================================
-   NAVIGATION TITLE
+   NAVBAR
    ============================================ */
 .nav-title {
-  color: #1a1a1a; /* ✅ Black */
+  color: #0a192f;
+  font-weight: 700;
 }
 
 .nav-title span {
@@ -208,51 +267,51 @@ ul, ol, li {
 }
 
 /* ============================================
-   FOOTER TEXT - BLACK
+   FOOTER
    ============================================ */
 .footer-box h3 {
-  color: #1a1a1a; /* ✅ Black */
+  color: #1e3a8a;
 }
 
 .footer-box p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
 
 .contact-details p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
 
 .footer-bottom {
-  color: #1a1a1a; /* ✅ Black */
+  color: #94a3b8;
 }
 
 /* ============================================
-   ABOUT SECTION TEXT - BLACK
+   ABOUT SECTION
    ============================================ */
 .about-section h2 {
-  color: #1a1a1a; /* ✅ Black */
+  color: #1e3a8a;
 }
 
 .about-section p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
 
 .feature-card h4 {
-  color: #1a1a1a; /* ✅ Black */
+  color: #1e293b;
 }
 
 .feature-card p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
 
 .feature-desc h3 {
-  color: #1a1a1a; /* ✅ Black */
+  color: #1e3a8a;
 }
 
 .feature-desc p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
 
 .values ul li p {
-  color: #1a1a1a; /* ✅ Black */
+  color: #475569;
 }
