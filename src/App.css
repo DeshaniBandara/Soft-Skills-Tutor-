@@ -1,37 +1,10 @@
-/* ============================================
-   ROOT CONTAINER
-   ============================================ */
-#root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #ffffff;
-  min-height: 100vh;
 }
 
-/* ============================================
-   📝 YELLOW HIGHLIGHT EFFECT
-   ============================================ */
-.highlight {
-  background: linear-gradient(to top, #fef08a 40%, transparent 60%);
-  padding: 0.1rem 0.2rem;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-/* ============================================
-   ALTERNATIVE: Simple Background Highlight
-   ============================================ */
-.highlight-simple {
-  background-color: #fef08a;
-  padding: 0.1rem 0.3rem;
-  border-radius: 4px;
-}
-
-/* ============================================
-   LOGO STYLES
-   ============================================ */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -46,8 +19,12 @@
 }
 
 @keyframes logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -56,274 +33,133 @@
   }
 }
 
-/* ============================================
-   CARD SECTION
-   ============================================ */
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}*/
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card section */
 .card {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: #f8fafc;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  color: #1a1a2e;
-}
-
-/* ============================================
-   HEADINGS
-   ============================================ */
-h1 {
-  color: #0a192f;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-h2 {
-  color: #1e3a8a;
-  font-weight: 600;
-}
-
-h3 {
-  color: #1a1a2e;
-  font-weight: 600;
-}
-
-h4, h5, h6 {
-  color: #4a4a6a;
-  font-weight: 500;
-}
-
-/* ============================================
-   PARAGRAPHS
-   ============================================ */
-p {
-  color: #4a4a6a;
-  line-height: 1.7;
-}
-
-/* ============================================
-   LINKS
-   ============================================ */
-a {
-  color: #1e3a8a;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #3b82f6;
-  text-decoration: underline;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-button {
-  color: #ffffff;
-  background-color: #1e3a8a;
-  border: none;
-  padding: 0.6em 1.2em;
+  background: #f9f9f9;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #3b82f6;
-  transform: translateY(-2px);
+/* Docs link */
+.read-the-docs {
+  color: #888;
 }
 
-button:disabled {
-  background-color: #8a8aa0;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* ============================================
-   LISTS
-   ============================================ */
-ul, ol {
-  color: #4a4a6a;
-}
-
-li {
-  color: #4a4a6a;
-  margin-bottom: 0.5rem;
-}
-
-/* ============================================
-   INPUT FIELDS
-   ============================================ */
-input, textarea, select {
-  color: #1a1a2e;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: #1e3a8a;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
-}
-
-input::placeholder, textarea::placeholder {
-  color: #8a8aa0;
-}
-
-/* ============================================
-   RESPONSIVE TWEAKS
-   ============================================ */
+/* 🔹 Responsive tweaks */
 @media (max-width: 1024px) {
-  #root { padding: 1.5rem; }
-  .logo { height: 4em; }
+  #root {
+    padding: 1.5rem;
+  }
+  .logo {
+    height: 4em;
+  }
 }
 
 @media (max-width: 768px) {
-  #root { padding: 1rem; }
-  .logo { height: 3em; }
-  .card { max-width: 90%; padding: 1.5em; }
-  h1 { font-size: 2rem; }
+  #root {
+    padding: 1rem;
+  }
+  .logo {
+    height: 3em;
+  }
+  .card {
+    max-width: 90%;
+    padding: 1.5em;
+  }
 }
 
 @media (max-width: 480px) {
-  #root { padding: 0.5rem; }
-  .logo { height: 2.5em; }
-  h1 { font-size: 1.5rem; }
-  p { font-size: 0.9rem; }
+  #root {
+    padding: 0.5rem;
+  }
+  .logo {
+    height: 2.5em;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }
-
-/* ============================================
-   CSS VARIABLES
-   ============================================ */
+/* Recommended: Set a global variable in App.css */
 :root {
   --brand-blue: #1e3a8a;
-  --brand-light: #3b82f6;
-  --brand-dark: #0a192f;
-  --text-dark: #1a1a2e;
-  --text-gray: #4a4a6a;
-  --text-light: #8a8aa0;
-  --bg-light: #f8fafc;
-  --border-color: #e2e8f0;
-  --highlight-yellow: #fef08a;
 }
 
-/* Brand Elements */
+/* Then use it everywhere */
 .nav-title span {
   color: var(--brand-blue);
 }
 
 .mcq-button {
-  background-color: var(--brand-blue);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  background-color: var(--brand-blue); /* Updates your buttons too! */
 }
+/* --- Add only this to the bottom of your existing App.css --- */
 
-.mcq-button:hover {
-  background-color: var(--brand-light);
-}
-
-/* ============================================
-   DOWNLOAD PAGE FIXES
-   ============================================ */
+/* This fixes the PDF grid specifically without touching other pages */
 @media (max-width: 850px) {
   .resource-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr !important; /* Forces 1 column on mobile */
     gap: 20px !important;
   }
 
   .download-container {
-    padding: 60px 20px !important;
+    padding: 60px 20px !important; /* Reduces side spacing on small screens */
   }
 
   .download-header h1 {
-    font-size: 2rem !important;
-    color: var(--brand-blue);
+    font-size: 2rem !important; /* Shrinks the title so it fits on one line */
   }
 
+  /* Makes the pink boxes fit better on mobile screens */
   .card-frame {
     padding: 20px !important;
   }
-}
-
-/* ============================================
-   NAVBAR
-   ============================================ */
-.nav-title {
-  color: var(--brand-dark);
-  font-weight: 700;
-}
-
-.nav-title span {
-  color: var(--brand-blue);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.footer-box h3 {
-  color: var(--brand-blue);
-}
-
-.footer-box p {
-  color: var(--text-gray);
-}
-
-.contact-details p {
-  color: var(--text-gray);
-}
-
-.footer-bottom {
-  color: var(--text-light);
-}
-
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
-.about-section h2 {
-  color: var(--brand-blue);
-}
-
-.about-section p {
-  color: var(--text-gray);
-}
-
-.feature-card h4 {
-  color: var(--text-dark);
-}
-
-.feature-card p {
-  color: var(--text-gray);
-}
-
-.feature-desc h3 {
-  color: var(--brand-blue);
-}
-
-.feature-desc p {
-  color: var(--text-gray);
-}
-
-.values ul li p {
-  color: var(--text-gray);
-}
-
-/* ============================================
-   SELECTION COLOR
-   ============================================ */
-::selection {
-  background: var(--brand-blue);
-  color: #ffffff;
-}
-
-::-moz-selection {
-  background: var(--brand-blue);
-  color: #ffffff;
 }
