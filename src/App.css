@@ -1,46 +1,6 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}*/
-/* Root container */
+/* ============================================
+   ROOT CONTAINER
+   ============================================ */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -48,21 +8,24 @@
   text-align: center;
 }
 
-/* Logo styles */
+/* ============================================
+   LOGO STYLES
+   ============================================ */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -71,27 +34,75 @@
     transform: rotate(360deg);
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-/* Card section */
+/* ============================================
+   CARD SECTION
+   ============================================ */
 .card {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
   background: #f9f9f9;
   border-radius: 8px;
+  color: #1a1a1a; /* ✅ Black text */
 }
 
-/* Docs link */
+/* ============================================
+   DOCS LINK
+   ============================================ */
 .read-the-docs {
-  color: #888;
+  color: #1a1a1a; /* ✅ Black text (was #888) */
 }
 
-/* 🔹 Responsive tweaks */
+/* ============================================
+   HEADINGS - ALL BLACK
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a; /* ✅ Black text */
+}
+
+/* ============================================
+   PARAGRAPHS - ALL BLACK
+   ============================================ */
+p {
+  color: #1a1a1a; /* ✅ Black text */
+}
+
+/* ============================================
+   LINKS - BLACK WITH HOVER
+   ============================================ */
+a {
+  color: #1a1a1a; /* ✅ Black text */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e3a8a; /* Blue on hover */
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+button {
+  color: #1a1a1a; /* ✅ Black text */
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+ul, ol, li {
+  color: #1a1a1a; /* ✅ Black text */
+}
+
+/* ============================================
+   RESPONSIVE TWEAKS
+   ============================================ */
 @media (max-width: 1024px) {
   #root {
     padding: 1.5rem;
@@ -123,43 +134,125 @@
   }
   h1 {
     font-size: 1.5rem;
+    color: #1a1a1a; /* ✅ Black */
   }
   p {
     font-size: 0.9rem;
+    color: #1a1a1a; /* ✅ Black */
   }
 }
-/* Recommended: Set a global variable in App.css */
+
+/* ============================================
+   CSS VARIABLES (BRAND COLORS)
+   ============================================ */
 :root {
   --brand-blue: #1e3a8a;
 }
 
-/* Then use it everywhere */
+/* Brand blue for specific elements */
 .nav-title span {
   color: var(--brand-blue);
 }
 
 .mcq-button {
-  background-color: var(--brand-blue); /* Updates your buttons too! */
+  background-color: var(--brand-blue);
 }
-/* --- Add only this to the bottom of your existing App.css --- */
 
-/* This fixes the PDF grid specifically without touching other pages */
+/* ============================================
+   DOWNLOAD PAGE FIXES (PDF Grid)
+   ============================================ */
 @media (max-width: 850px) {
   .resource-grid {
-    grid-template-columns: 1fr !important; /* Forces 1 column on mobile */
+    grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
 
   .download-container {
-    padding: 60px 20px !important; /* Reduces side spacing on small screens */
+    padding: 60px 20px !important;
   }
 
   .download-header h1 {
-    font-size: 2rem !important; /* Shrinks the title so it fits on one line */
+    font-size: 2rem !important;
+    color: #1a1a1a; /* ✅ Black */
   }
 
-  /* Makes the pink boxes fit better on mobile screens */
   .card-frame {
     padding: 20px !important;
   }
+}
+
+/* ============================================
+   RESOURCE CARD TEXT - BLACK
+   ============================================ */
+.resource-card h3 {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.resource-card p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.download-header p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+/* ============================================
+   NAVIGATION TITLE
+   ============================================ */
+.nav-title {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.nav-title span {
+  color: var(--brand-blue);
+}
+
+/* ============================================
+   FOOTER TEXT - BLACK
+   ============================================ */
+.footer-box h3 {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.footer-box p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.contact-details p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.footer-bottom {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+/* ============================================
+   ABOUT SECTION TEXT - BLACK
+   ============================================ */
+.about-section h2 {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.about-section p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.feature-card h4 {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.feature-card p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.feature-desc h3 {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.feature-desc p {
+  color: #1a1a1a; /* ✅ Black */
+}
+
+.values ul li p {
+  color: #1a1a1a; /* ✅ Black */
 }
