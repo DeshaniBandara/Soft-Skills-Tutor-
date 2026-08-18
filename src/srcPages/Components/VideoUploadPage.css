@@ -4,8 +4,16 @@
   padding: 40px;
   background: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.upload-container h2 {
+  color: #0a192f;  /* ✅ Dark Text */
+}
+
+.upload-container p {
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
 }
 
 .upload-box {
@@ -14,6 +22,14 @@
   border: 2px dashed #e2e8f0;
   border-radius: 16px;
   background: #f8fafc;
+}
+
+.upload-box .file-info span {
+  color: #1a1a2e;  /* ✅ Dark Text */
+}
+
+.upload-box .upload-placeholder p {
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
 }
 
 .analyze-btn {
@@ -30,10 +46,14 @@
   font-weight: 600;
 }
 
+.analyze-btn:hover {
+  background: #3b82f6;
+}
+
 .feedback-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,29 +68,66 @@
   max-width: 400px;
   animation: scaleIn 0.3s ease-out;
 }
-.back-button{
-  position: absolute;
-  top: 300px;
-  left: 300px;
-  background: none;
-  border: 1px solid #3b5998;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: 0.3s;
-  color: #3b5998;
-  background-color: transparent;
-  
+
+.feedback-popup h3 {
+  color: #0a192f;  /* ✅ Dark Text */
 }
 
-.back-button:hover {
-  background-color: #3b5998; /* Fills the button with blue */
-  color: white;              /* Changes text to white so it's readable */
-  border-color: #3b5998;     /* Keeps the border the same blue */
+.feedback-popup .result-card .label {
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
+}
+
+.feedback-popup .result-card .value {
+  color: #1a1a2e;  /* ✅ Dark Text */
+}
+
+.feedback-popup .result-card .ai-tip p {
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
+}
+
+.close-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background: #3b82f6;
+}
+
+.back-btn {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  padding: 8px 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
+  background-color: transparent;
+}
+
+.back-btn:hover {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
