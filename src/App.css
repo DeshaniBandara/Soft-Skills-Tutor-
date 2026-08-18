@@ -1,11 +1,13 @@
 /* ============================================
-   ROOT CONTAINER
+   ROOT CONTAINER - Clean & Readable
    ============================================ */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 /* ============================================
@@ -36,140 +38,66 @@
 }
 
 /* ============================================
-   🎨 COLOR ANIMATION - White → Black → Blue → Red → Green → Yellow
-   ============================================ */
-@keyframes colorCyclePause {
-  0% { 
-    color: #ffffff; 
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  12% { 
-    color: #ffffff; 
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  15% { 
-    color: #000000; 
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  27% { 
-    color: #000000; 
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  30% { 
-    color: #1e3a8a; 
-    text-shadow: 0 0 20px rgba(30, 58, 138, 0.4);
-  }
-  42% { 
-    color: #1e3a8a; 
-    text-shadow: 0 0 20px rgba(30, 58, 138, 0.4);
-  }
-  45% { 
-    color: #dc2626; 
-    text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
-  }
-  57% { 
-    color: #dc2626; 
-    text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
-  }
-  60% { 
-    color: #16a34a; 
-    text-shadow: 0 0 20px rgba(22, 163, 74, 0.4);
-  }
-  72% { 
-    color: #16a34a; 
-    text-shadow: 0 0 20px rgba(22, 163, 74, 0.4);
-  }
-  75% { 
-    color: #eab308; 
-    text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
-  }
-  87% { 
-    color: #eab308; 
-    text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
-  }
-  90% { 
-    color: #ffffff; 
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  100% { 
-    color: #ffffff; 
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-}
-
-/* ============================================
-   HEADINGS - COLOR CYCLE WITH PAUSE
-   ============================================ */
-h1 {
-  animation: colorCyclePause 18s ease-in-out infinite;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-h2 {
-  animation: colorCyclePause 20s ease-in-out infinite;
-  font-weight: 600;
-}
-
-h3 {
-  animation: colorCyclePause 22s ease-in-out infinite;
-  font-weight: 600;
-}
-
-h4, h5, h6 {
-  animation: colorCyclePause 24s ease-in-out infinite;
-  font-weight: 500;
-}
-
-/* ============================================
-   PARAGRAPHS
-   ============================================ */
-p {
-  animation: colorCyclePause 22s ease-in-out infinite;
-  line-height: 1.7;
-}
-
-/* ============================================
-   LINKS
-   ============================================ */
-a {
-  animation: colorCyclePause 16s ease-in-out infinite;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  animation: none;
-  color: #1e3a8a;
-  text-decoration: underline;
-}
-
-/* ============================================
-   LISTS
-   ============================================ */
-ul, ol {
-  animation: colorCyclePause 22s ease-in-out infinite;
-}
-
-li {
-  animation: colorCyclePause 22s ease-in-out infinite;
-  margin-bottom: 0.5rem;
-}
-
-/* ============================================
    CARD SECTION
    ============================================ */
 .card {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: #f9f9f9;
+  background: #f8fafc;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
 }
 
 /* ============================================
-   BUTTONS
+   HEADINGS - Dark for Readability
+   ============================================ */
+h1 {
+  color: #0a192f;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+h3 {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* ============================================
+   PARAGRAPHS - Dark Gray for Readability
+   ============================================ */
+p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* ============================================
+   LINKS - Brand Blue
+   ============================================ */
+a {
+  color: #1e3a8a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* ============================================
+   BUTTONS - Brand Blue
    ============================================ */
 button {
   color: #ffffff;
@@ -178,13 +106,12 @@ button {
   padding: 0.6em 1.2em;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #3b82f6;
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(0, 136, 255, 0.3);
 }
 
 button:disabled {
@@ -194,22 +121,34 @@ button:disabled {
 }
 
 /* ============================================
+   LISTS
+   ============================================ */
+ul, ol {
+  color: #334155;
+}
+
+li {
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
    INPUT FIELDS
    ============================================ */
 input, textarea, select {
   color: #1e293b;
   background: #f8fafc;
-  border: 2px solid #1e3a8a;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 0.6rem 1rem;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #16a34a;
+  border-color: #1e3a8a;
   outline: none;
-  box-shadow: 0 0 20px rgba(22, 163, 74, 0.2);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
 }
 
 input::placeholder, textarea::placeholder {
@@ -275,7 +214,7 @@ input::placeholder, textarea::placeholder {
 
 /* Brand elements */
 .nav-title span {
-  animation: colorCyclePause 14s ease-in-out infinite;
+  color: var(--brand-blue);
 }
 
 .mcq-button {
@@ -307,7 +246,7 @@ input::placeholder, textarea::placeholder {
 
   .download-header h1 {
     font-size: 2rem !important;
-    animation: colorCyclePause 14s ease-in-out infinite;
+    color: #1e3a8a;
   }
 
   .card-frame {
@@ -316,64 +255,94 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   NAVBAR
+   NAVBAR - Clean & Readable
    ============================================ */
 .nav-title {
+  color: #0a192f;
   font-weight: 700;
 }
 
 .nav-title span {
-  animation: colorCyclePause 14s ease-in-out infinite;
+  color: var(--brand-blue);
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - Clean & Readable
    ============================================ */
 .footer-box h3 {
-  animation: colorCyclePause 18s ease-in-out infinite;
+  color: #1e3a8a;
 }
 
 .footer-box p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
 }
 
 .contact-details p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
 }
 
 .footer-bottom {
-  animation: colorCyclePause 26s ease-in-out infinite;
+  color: #94a3b8;
 }
 
 /* ============================================
-   ABOUT SECTION
+   ABOUT SECTION - Clean & Readable
    ============================================ */
 .about-section h2 {
-  animation: colorCyclePause 18s ease-in-out infinite;
+  color: #1e3a8a;
 }
 
 .about-section p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
 }
 
 .feature-card h4 {
-  animation: colorCyclePause 18s ease-in-out infinite;
+  color: #1e293b;
 }
 
 .feature-card p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
 }
 
 .feature-desc h3 {
-  animation: colorCyclePause 18s ease-in-out infinite;
+  color: #1e3a8a;
 }
 
 .feature-desc p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
 }
 
 .values ul li p {
-  animation: colorCyclePause 22s ease-in-out infinite;
+  color: #475569;
+}
+
+/* ============================================
+   TEXT VISIBILITY FIXES
+   ============================================ */
+
+/* Fix for white text on white background */
+.bg-light {
+  color: #1e293b !important;
+}
+
+/* Fix for dark text on dark background */
+.bg-dark {
+  color: #ffffff !important;
+}
+
+/* General text visibility */
+.text-visible {
+  color: #1e293b !important;
+}
+
+/* Fix for any hidden text issues */
+.hidden-text {
+  color: #1e293b !important;
+}
+
+/* Ensure all text is readable */
+* {
+  color: inherit;
 }
 
 /* ============================================
