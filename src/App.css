@@ -11,6 +11,25 @@
 }
 
 /* ============================================
+   📝 YELLOW HIGHLIGHT EFFECT
+   ============================================ */
+.highlight {
+  background: linear-gradient(to top, #fef08a 40%, transparent 60%);
+  padding: 0.1rem 0.2rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ============================================
+   ALTERNATIVE: Simple Background Highlight
+   ============================================ */
+.highlight-simple {
+  background-color: #fef08a;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+/* ============================================
    LOGO STYLES
    ============================================ */
 .logo {
@@ -51,7 +70,7 @@
 }
 
 /* ============================================
-   HEADINGS - Clean & Professional
+   HEADINGS
    ============================================ */
 h1 {
   color: #0a192f;
@@ -75,7 +94,7 @@ h4, h5, h6 {
 }
 
 /* ============================================
-   PARAGRAPHS - Clean & Readable
+   PARAGRAPHS
    ============================================ */
 p {
   color: #4a4a6a;
@@ -83,7 +102,7 @@ p {
 }
 
 /* ============================================
-   LINKS - Brand Blue
+   LINKS
    ============================================ */
 a {
   color: #1e3a8a;
@@ -97,7 +116,7 @@ a:hover {
 }
 
 /* ============================================
-   BUTTONS - Brand Blue
+   BUTTONS
    ============================================ */
 button {
   color: #ffffff;
@@ -178,7 +197,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   CSS VARIABLES (Main Theme)
+   CSS VARIABLES
    ============================================ */
 :root {
   --brand-blue: #1e3a8a;
@@ -189,6 +208,7 @@ input::placeholder, textarea::placeholder {
   --text-light: #8a8aa0;
   --bg-light: #f8fafc;
   --border-color: #e2e8f0;
+  --highlight-yellow: #fef08a;
 }
 
 /* Brand Elements */
