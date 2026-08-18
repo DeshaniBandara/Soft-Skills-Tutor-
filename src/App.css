@@ -6,6 +6,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 /* ============================================
@@ -24,123 +26,15 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* ============================================
-   LOGO SPIN ANIMATION
-   ============================================ */
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-/* ============================================
-   🎯 WHITE ↔ BLACK ANIMATION WITH TEXT OUTLINE
-   ============================================ */
-@keyframes whiteBlackPulse {
-  /* Black text with White outline */
-  0% {
-    color: #000000;
-    text-shadow: 
-      0 0 2px #ffffff,
-      0 0 4px #ffffff;
-  }
-  /* Stay Black (pause) */
-  15% {
-    color: #000000;
-    text-shadow: 
-      0 0 2px #ffffff,
-      0 0 4px #ffffff;
-  }
-  /* Transition to White text with Black outline */
-  20% {
-    color: #ffffff;
-    text-shadow: 
-      0 0 2px #000000,
-      0 0 4px #000000;
-  }
-  /* Stay White (pause) */
-  65% {
-    color: #ffffff;
-    text-shadow: 
-      0 0 2px #000000,
-      0 0 4px #000000;
-  }
-  /* Transition back to Black text with White outline */
-  70% {
-    color: #000000;
-    text-shadow: 
-      0 0 2px #ffffff,
-      0 0 4px #ffffff;
-  }
-  /* Stay Black until cycle restarts */
-  100% {
-    color: #000000;
-    text-shadow: 
-      0 0 2px #ffffff,
-      0 0 4px #ffffff;
-  }
-}
-
-/* ============================================
-   APPLY ANIMATION WITH OUTLINE TO ALL TEXT
-   ============================================ */
-
-/* Headings */
-h1 {
-  animation: whiteBlackPulse 8s ease-in-out infinite;
-  font-weight: 700;
-}
-
-h2 {
-  animation: whiteBlackPulse 10s ease-in-out infinite;
-  font-weight: 600;
-}
-
-h3 {
-  animation: whiteBlackPulse 12s ease-in-out infinite;
-  font-weight: 600;
-}
-
-h4, h5, h6 {
-  animation: whiteBlackPulse 14s ease-in-out infinite;
-  font-weight: 500;
-}
-
-/* Paragraphs */
-p {
-  animation: whiteBlackPulse 12s ease-in-out infinite;
-  line-height: 1.7;
-}
-
-/* Links */
-a {
-  animation: whiteBlackPulse 8s ease-in-out infinite;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  animation: none;
-  color: #1e3a8a;
-  text-decoration: underline;
-}
-
-/* Lists */
-ul, ol {
-  animation: whiteBlackPulse 12s ease-in-out infinite;
-}
-
-li {
-  animation: whiteBlackPulse 12s ease-in-out infinite;
-  margin-bottom: 0.5rem;
 }
 
 /* ============================================
@@ -150,19 +44,60 @@ li {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: #f9f9f9;
-  border-radius: 8px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  color: #1a1a2e;
 }
 
 /* ============================================
-   DOCS LINK
+   HEADINGS - Clean & Professional
    ============================================ */
-.read-the-docs {
-  color: #888;
+h1 {
+  color: #0a192f;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+h3 {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  color: #4a4a6a;
+  font-weight: 500;
 }
 
 /* ============================================
-   BUTTONS (Stay Fixed)
+   PARAGRAPHS - Clean & Readable
+   ============================================ */
+p {
+  color: #4a4a6a;
+  line-height: 1.7;
+}
+
+/* ============================================
+   LINKS - Brand Blue
+   ============================================ */
+a {
+  color: #1e3a8a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* ============================================
+   BUTTONS - Brand Blue
    ============================================ */
 button {
   color: #ffffff;
@@ -180,16 +115,28 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #94a3b8;
+  background-color: #8a8aa0;
   cursor: not-allowed;
   transform: none;
 }
 
 /* ============================================
-   INPUT FIELDS (Stay Fixed)
+   LISTS
+   ============================================ */
+ul, ol {
+  color: #4a4a6a;
+}
+
+li {
+  color: #4a4a6a;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   INPUT FIELDS
    ============================================ */
 input, textarea, select {
-  color: #1e293b;
+  color: #1a1a2e;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -201,63 +148,52 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   border-color: #1e3a8a;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
 }
 
 input::placeholder, textarea::placeholder {
-  color: #94a3b8;
+  color: #8a8aa0;
 }
 
 /* ============================================
    RESPONSIVE TWEAKS
    ============================================ */
 @media (max-width: 1024px) {
-  #root {
-    padding: 1.5rem;
-  }
-  .logo {
-    height: 4em;
-  }
+  #root { padding: 1.5rem; }
+  .logo { height: 4em; }
 }
 
 @media (max-width: 768px) {
-  #root {
-    padding: 1rem;
-  }
-  .logo {
-    height: 3em;
-  }
-  .card {
-    max-width: 90%;
-    padding: 1.5em;
-  }
+  #root { padding: 1rem; }
+  .logo { height: 3em; }
+  .card { max-width: 90%; padding: 1.5em; }
+  h1 { font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
-  #root {
-    padding: 0.5rem;
-  }
-  .logo {
-    height: 2.5em;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
+  #root { padding: 0.5rem; }
+  .logo { height: 2.5em; }
+  h1 { font-size: 1.5rem; }
+  p { font-size: 0.9rem; }
 }
 
 /* ============================================
-   CSS VARIABLES
+   CSS VARIABLES (Main Theme)
    ============================================ */
 :root {
   --brand-blue: #1e3a8a;
+  --brand-light: #3b82f6;
+  --brand-dark: #0a192f;
+  --text-dark: #1a1a2e;
+  --text-gray: #4a4a6a;
+  --text-light: #8a8aa0;
+  --bg-light: #f8fafc;
+  --border-color: #e2e8f0;
 }
 
-/* Brand elements - White ↔ Black with Outline */
+/* Brand Elements */
 .nav-title span {
-  animation: whiteBlackPulse 6s ease-in-out infinite;
+  color: var(--brand-blue);
 }
 
 .mcq-button {
@@ -271,7 +207,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .mcq-button:hover {
-  background-color: #3b82f6;
+  background-color: var(--brand-light);
 }
 
 /* ============================================
@@ -289,6 +225,7 @@ input::placeholder, textarea::placeholder {
 
   .download-header h1 {
     font-size: 2rem !important;
+    color: var(--brand-blue);
   }
 
   .card-frame {
@@ -297,10 +234,10 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   NAVBAR - Fixed Colors (No Animation)
+   NAVBAR
    ============================================ */
 .nav-title {
-  color: #0a192f;
+  color: var(--brand-dark);
   font-weight: 700;
 }
 
@@ -309,64 +246,64 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   FOOTER - Fixed Colors (No Animation)
+   FOOTER
    ============================================ */
 .footer-box h3 {
-  color: #1e3a8a;
+  color: var(--brand-blue);
 }
 
 .footer-box p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 .contact-details p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 .footer-bottom {
-  color: #94a3b8;
+  color: var(--text-light);
 }
 
 /* ============================================
-   ABOUT SECTION - Fixed Colors (No Animation)
+   ABOUT SECTION
    ============================================ */
 .about-section h2 {
-  color: #1e3a8a;
+  color: var(--brand-blue);
 }
 
 .about-section p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 .feature-card h4 {
-  color: #1e293b;
+  color: var(--text-dark);
 }
 
 .feature-card p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 .feature-desc h3 {
-  color: #1e3a8a;
+  color: var(--brand-blue);
 }
 
 .feature-desc p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 .values ul li p {
-  color: #475569;
+  color: var(--text-gray);
 }
 
 /* ============================================
    SELECTION COLOR
    ============================================ */
 ::selection {
-  background: #1e3a8a;
+  background: var(--brand-blue);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #1e3a8a;
+  background: var(--brand-blue);
   color: #ffffff;
 }
