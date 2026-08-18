@@ -6,8 +6,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #ffffff;
-  min-height: 100vh;
 }
 
 /* ============================================
@@ -26,15 +24,111 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* ============================================
+   LOGO SPIN ANIMATION
+   ============================================ */
 @keyframes logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+/* ============================================
+   🎯 WHITE ↔ BLACK COLOR ANIMATION WITH PAUSE
+   ============================================ */
+@keyframes whiteBlackPulse {
+  /* Start with Black */
+  0% {
+    color: #000000;
+    text-shadow: none;
+  }
+  /* Stay Black for a while (pause) */
+  15% {
+    color: #000000;
+    text-shadow: none;
+  }
+  /* Transition to White */
+  20% {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  /* Stay White for a while (pause) */
+  65% {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  /* Transition back to Black */
+  70% {
+    color: #000000;
+    text-shadow: none;
+  }
+  /* Stay Black until cycle restarts */
+  100% {
+    color: #000000;
+    text-shadow: none;
+  }
+}
+
+/* ============================================
+   APPLY ANIMATION TO ALL TEXT
+   ============================================ */
+
+/* Headings */
+h1 {
+  animation: whiteBlackPulse 8s ease-in-out infinite;
+  font-weight: 700;
+}
+
+h2 {
+  animation: whiteBlackPulse 10s ease-in-out infinite;
+  font-weight: 600;
+}
+
+h3 {
+  animation: whiteBlackPulse 12s ease-in-out infinite;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  animation: whiteBlackPulse 14s ease-in-out infinite;
+  font-weight: 500;
+}
+
+/* Paragraphs */
+p {
+  animation: whiteBlackPulse 12s ease-in-out infinite;
+  line-height: 1.7;
+}
+
+/* Links */
+a {
+  animation: whiteBlackPulse 8s ease-in-out infinite;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  animation: none;
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  animation: whiteBlackPulse 12s ease-in-out infinite;
+}
+
+li {
+  animation: whiteBlackPulse 12s ease-in-out infinite;
+  margin-bottom: 0.5rem;
 }
 
 /* ============================================
@@ -44,62 +138,19 @@
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: #f8fafc;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  color: #1a1a2e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  background: #f9f9f9;
+  border-radius: 8px;
 }
 
 /* ============================================
-   HEADINGS
+   DOCS LINK
    ============================================ */
-h1 {
-  color: #0a192f;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-h2 {
-  color: #1e3a8a;
-  font-weight: 600;
-}
-
-h3 {
-  color: #1a1a2e;
-  font-weight: 600;
-}
-
-h4, h5, h6 {
-  color: #4a4a6a;
-  font-weight: 500;
+.read-the-docs {
+  color: #888;
 }
 
 /* ============================================
-   PARAGRAPHS
-   ============================================ */
-p {
-  color: #4a4a6a;
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-/* ============================================
-   LINKS
-   ============================================ */
-a {
-  color: #1e3a8a;
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-  color: #3b82f6;
-  text-decoration: underline;
-}
-
-/* ============================================
-   BUTTONS
+   BUTTONS (Stay Fixed - No Animation)
    ============================================ */
 button {
   color: #ffffff;
@@ -109,116 +160,96 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
 }
 
 button:hover {
   background-color: #3b82f6;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
 }
 
 button:disabled {
-  background-color: #8a8aa0;
+  background-color: #94a3b8;
   cursor: not-allowed;
   transform: none;
-  box-shadow: none;
 }
 
 /* ============================================
-   LISTS
-   ============================================ */
-ul, ol {
-  color: #4a4a6a;
-}
-
-li {
-  color: #4a4a6a;
-  margin-bottom: 0.5rem;
-}
-
-/* ============================================
-   INPUT FIELDS
+   INPUT FIELDS (Stay Fixed - No Animation)
    ============================================ */
 input, textarea, select {
-  color: #1a1a2e;
+  color: #1e293b;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 0.6rem 1rem;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus {
   border-color: #1e3a8a;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
 }
 
 input::placeholder, textarea::placeholder {
-  color: #8a8aa0;
+  color: #94a3b8;
 }
 
 /* ============================================
    RESPONSIVE TWEAKS
    ============================================ */
 @media (max-width: 1024px) {
-  #root { padding: 1.5rem; }
-  .logo { height: 4em; }
+  #root {
+    padding: 1.5rem;
+  }
+  .logo {
+    height: 4em;
+  }
 }
 
 @media (max-width: 768px) {
-  #root { padding: 1rem; }
-  .logo { height: 3em; }
-  .card { max-width: 90%; padding: 1.5em; }
-  h1 { font-size: 2rem; }
+  #root {
+    padding: 1rem;
+  }
+  .logo {
+    height: 3em;
+  }
+  .card {
+    max-width: 90%;
+    padding: 1.5em;
+  }
 }
 
 @media (max-width: 480px) {
-  #root { padding: 0.5rem; }
-  .logo { height: 2.5em; }
-  h1 { font-size: 1.5rem; }
-  p { font-size: 0.9rem; }
+  #root {
+    padding: 0.5rem;
+  }
+  .logo {
+    height: 2.5em;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }
 
 /* ============================================
-   CSS VARIABLES (MAIN THEME)
+   CSS VARIABLES (Brand Colors)
    ============================================ */
 :root {
-  /* Primary Colors */
-  --primary-blue: #1e3a8a;
-  --primary-light: #3b82f6;
-  --primary-dark: #0a192f;
-  
-  /* Text Colors */
-  --text-dark: #1a1a2e;
-  --text-gray: #4a4a6a;
-  --text-light: #8a8aa0;
-  
-  /* Background Colors */
-  --bg-white: #ffffff;
-  --bg-light: #f8fafc;
-  --bg-card: #f8fafc;
-  
-  /* Border Colors */
-  --border-color: #e2e8f0;
-  
-  /* Status Colors */
-  --success-green: #22c55e;
-  --error-red: #ef4444;
-  --warning-yellow: #f59e0b;
+  --brand-blue: #1e3a8a;
 }
 
-/* Brand elements */
+/* Brand elements - White ↔ Black Animation */
 .nav-title span {
-  color: var(--primary-blue);
+  animation: whiteBlackPulse 6s ease-in-out infinite;
 }
 
 .mcq-button {
-  background-color: var(--primary-blue);
+  background-color: var(--brand-blue);
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -228,7 +259,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .mcq-button:hover {
-  background-color: var(--primary-light);
+  background-color: #3b82f6;
 }
 
 /* ============================================
@@ -246,7 +277,6 @@ input::placeholder, textarea::placeholder {
 
   .download-header h1 {
     font-size: 2rem !important;
-    color: var(--primary-blue);
   }
 
   .card-frame {
@@ -255,76 +285,76 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   NAVBAR
+   NAVBAR - No Animation (Fixed Colors)
    ============================================ */
 .nav-title {
-  color: var(--primary-dark);
+  color: #0a192f;
   font-weight: 700;
 }
 
 .nav-title span {
-  color: var(--primary-blue);
+  color: var(--brand-blue);
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - No Animation (Fixed Colors)
    ============================================ */
 .footer-box h3 {
-  color: var(--primary-blue);
+  color: #1e3a8a;
 }
 
 .footer-box p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .contact-details p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .footer-bottom {
-  color: var(--text-light);
+  color: #94a3b8;
 }
 
 /* ============================================
-   ABOUT SECTION
+   ABOUT SECTION - No Animation (Fixed Colors)
    ============================================ */
 .about-section h2 {
-  color: var(--primary-blue);
+  color: #1e3a8a;
 }
 
 .about-section p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .feature-card h4 {
-  color: var(--text-dark);
+  color: #1e293b;
 }
 
 .feature-card p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .feature-desc h3 {
-  color: var(--primary-blue);
+  color: #1e3a8a;
 }
 
 .feature-desc p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 .values ul li p {
-  color: var(--text-gray);
+  color: #475569;
 }
 
 /* ============================================
    SELECTION COLOR
    ============================================ */
 ::selection {
-  background: var(--primary-blue);
+  background: #1e3a8a;
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background: var(--primary-blue);
+  background: #1e3a8a;
   color: #ffffff;
 }
