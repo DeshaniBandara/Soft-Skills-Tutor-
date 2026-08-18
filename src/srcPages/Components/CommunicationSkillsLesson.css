@@ -3,7 +3,6 @@
   background: #ffffff;
 }
 
-/* Header using your brand deep blue */
 .lesson-banner-blue {
   background-color: #1e3a8a;
   padding: 40px 20px;
@@ -29,15 +28,14 @@
 
 .lesson-stepper-body {
   max-width: 900px;
-  margin: 40px auto; /* Centered container but internal content is left-aligned */
+  margin: 40px auto;
   padding: 0 20px;
   position: relative;
 }
 
-/* Vertical timeline line */
 .stepper-line {
   position: absolute;
-  left: 40px; 
+  left: 40px;
   top: 10px;
   bottom: 180px;
   width: 2px;
@@ -47,9 +45,9 @@
 
 .step-row {
   display: flex;
-  align-items: flex-start; /* Aligns text to the top of the circle */
+  align-items: flex-start;
   gap: 25px;
-  margin-bottom: 25px; /* Tightened spacing */
+  margin-bottom: 25px;
   position: relative;
   z-index: 1;
 }
@@ -57,7 +55,7 @@
 .step-number {
   min-width: 42px;
   height: 42px;
-  background-color: #1e3a8a; /* Deep blue circles */
+  background-color: #1e3a8a;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -68,20 +66,20 @@
 }
 
 .step-info {
-  text-align: left; /* Explicit left alignment */
+  text-align: left;
 }
 
 .step-info h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #1a1a2e;  /* ✅ Dark Text */
   font-weight: 800;
 }
 
 .step-info p {
-  color: #475569;
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
   line-height: 1.4;
-  margin-top: 5px; /* Tighter gap between title and text */
+  margin-top: 5px;
 }
 
 .step-list {
@@ -91,8 +89,8 @@
 }
 
 .step-list li {
-  color: #475569;
-  margin-bottom: 3px; /* Minimal space between bullets */
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
+  margin-bottom: 3px;
 }
 
 .lesson-quote-container {
@@ -105,11 +103,12 @@
   font-weight: 700;
   font-style: italic;
   margin: 0;
+  color: #1a1a2e;  /* ✅ Dark Text */
 }
 
 .quote-author {
   display: block;
-  color: #64748b;
+  color: #8a8aa0;  /* ✅ Light Gray Text */
   margin-top: 5px;
 }
 
@@ -119,7 +118,6 @@
   padding-bottom: 60px;
 }
 
-/* Practice button in deep blue */
 .practice-mcq-btn {
   background-color: #1e3a8a;
   color: white;
