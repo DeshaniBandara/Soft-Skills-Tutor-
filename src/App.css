@@ -1,11 +1,14 @@
 /* ============================================
-   ROOT CONTAINER
+   ROOT CONTAINER - HACKER DARK THEME
    ============================================ */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #0a0e17;
+  min-height: 100vh;
+  color: #00ff41;
 }
 
 /* ============================================
@@ -18,15 +21,23 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #00ff41);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #00ff41);
 }
 
 @keyframes logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+  25% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+  50% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+  75% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+  100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,126 +47,169 @@
 }
 
 /* ============================================
-   CARD SECTION
+   CARD SECTION - GLASSMORPHISM
    ============================================ */
 .card {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: #f9f9f9;
+  background: rgba(10, 14, 23, 0.9);
+  border: 1px solid #00ff41;
   border-radius: 8px;
-  color: #ffffff; /* ✅ White */
+  color: #00ff41;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
 }
 
 /* ============================================
-   DOCS LINK
-   ============================================ */
-.read-the-docs {
-  color: #ffffff; /* ✅ White (was #64748b) */
-}
-
-/* ============================================
-   HEADINGS - ALL WHITE
+   HEADINGS - GLITCH EFFECT
    ============================================ */
 h1 {
-  color: #ffffff; /* ✅ White (was #0a192f) */
+  color: #00ff41;
   font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+h1:hover {
+  animation: glitch 0.3s infinite;
 }
 
 h2 {
-  color: #ffffff; /* ✅ White (was #1e3a8a) */
+  color: #00ff41;
   font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 h3 {
-  color: #ffffff; /* ✅ White (was #1e293b) */
+  color: #00ff41;
   font-weight: 600;
 }
 
 h4, h5, h6 {
-  color: #ffffff; /* ✅ White (was #334155) */
+  color: #00cc33;
   font-weight: 500;
 }
 
 /* ============================================
-   PARAGRAPHS - WHITE
+   PARAGRAPHS - TERMINAL STYLE
    ============================================ */
 p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
   line-height: 1.7;
+  font-family: 'Courier New', monospace;
 }
 
 /* ============================================
-   LINKS - WHITE
+   LINKS - NEON CYAN
    ============================================ */
 a {
-  color: #ffffff; /* ✅ White (was #1e3a8a) */
+  color: #00ffff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
 a:hover {
-  color: #93c5fd; /* Light blue on hover */
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
   text-decoration: underline;
 }
 
 /* ============================================
-   BUTTONS
+   BUTTONS - HACKER STYLE
    ============================================ */
 button {
-  color: #ffffff; /* ✅ White */
-  background-color: #1e3a8a;
-  border: none;
+  color: #00ff41;
+  background-color: transparent;
+  border: 1px solid #00ff41;
   padding: 0.6em 1.2em;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
 }
 
 button:hover {
-  background-color: #3b82f6;
+  background-color: #00ff41;
+  color: #0a0e17;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
   transform: translateY(-2px);
 }
 
 button:disabled {
-  background-color: #94a3b8;
+  opacity: 0.3;
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 /* ============================================
-   LISTS - WHITE
+   LISTS
    ============================================ */
 ul, ol {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
+  font-family: 'Courier New', monospace;
 }
 
 li {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
   margin-bottom: 0.5rem;
+  list-style-type: '> ';
+}
+
+li::marker {
+  color: #00ff41;
 }
 
 /* ============================================
-   INPUT FIELDS - WHITE TEXT
+   INPUT FIELDS - TERMINAL STYLE
    ============================================ */
 input, textarea, select {
-  color: #ffffff; /* ✅ White (was #1e293b) */
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  color: #00ff41;
+  background: rgba(10, 14, 23, 0.9);
+  border: 1px solid #00ff41;
+  border-radius: 4px;
   padding: 0.6rem 1rem;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.05);
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #1e3a8a;
+  border-color: #00ffff;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.05);
 }
 
 input::placeholder, textarea::placeholder {
-  color: #cbd5e1; /* ✅ Light gray placeholder (visible on white bg) */
+  color: #004d1a;
+}
+
+/* ============================================
+   SCROLLBAR - HACKER STYLE
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #0a0e17;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+  border-left: 1px solid #00ff41;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
 }
 
 /* ============================================
@@ -192,45 +246,54 @@ input::placeholder, textarea::placeholder {
   }
   h1 {
     font-size: 1.5rem;
-    color: #ffffff; /* ✅ White */
+    color: #00ff41;
   }
   p {
     font-size: 0.9rem;
-    color: #ffffff; /* ✅ White */
+    color: #33ff77;
   }
 }
 
 /* ============================================
-   CSS VARIABLES (Brand Colors)
+   CSS VARIABLES (HACKER COLORS)
    ============================================ */
 :root {
-  --brand-blue: #1e3a8a;
-  --brand-light: #3b82f6;
-  --brand-dark: #0a192f;
-  --text-dark: #1e293b;
-  --text-gray: #475569;
-  --text-light: #64748b;
-  --bg-light: #f8fafc;
-  --border-color: #e2e8f0;
+  --hacker-green: #00ff41;
+  --hacker-bright-green: #33ff77;
+  --hacker-cyan: #00ffff;
+  --hacker-dark: #0a0e17;
+  --hacker-gray: #004d1a;
+  --hacker-red: #ff0044;
 }
 
-/* Brand elements */
+/* Brand elements - Hacker Style */
 .nav-title span {
-  color: #ffffff; /* ✅ White (was var(--brand-blue)) */
+  color: var(--hacker-green);
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.nav-title span:hover {
+  animation: glitch 0.5s infinite;
 }
 
 .mcq-button {
-  background-color: var(--brand-blue);
-  color: #ffffff; /* ✅ White */
+  background-color: transparent;
+  color: #00ff41;
+  border: 1px solid #00ff41;
   padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
 }
 
 .mcq-button:hover {
-  background-color: var(--brand-light);
+  background-color: #00ff41;
+  color: #0a0e17;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
 }
 
 /* ============================================
@@ -244,76 +307,103 @@ input::placeholder, textarea::placeholder {
 
   .download-container {
     padding: 60px 20px !important;
+    background-color: #0a0e17 !important;
   }
 
   .download-header h1 {
     font-size: 2rem !important;
-    color: #ffffff; /* ✅ White (was #1e3a8a) */
+    color: #00ff41 !important;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
   }
 
   .card-frame {
     padding: 20px !important;
+    background: rgba(10, 14, 23, 0.9) !important;
+    border: 1px solid #00ff41 !important;
   }
 }
 
 /* ============================================
-   NAVBAR
+   NAVBAR - HACKER STYLE
    ============================================ */
 .nav-title {
-  color: #ffffff; /* ✅ White (was #0a192f) */
+  color: #00ff41;
   font-weight: 700;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
 .nav-title span {
-  color: #ffffff; /* ✅ White (was var(--brand-blue)) */
+  color: #00ff41;
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - HACKER STYLE
    ============================================ */
 .footer-box h3 {
-  color: #ffffff; /* ✅ White (was #1e3a8a) */
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 .footer-box p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
+  font-family: 'Courier New', monospace;
 }
 
 .contact-details p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
 }
 
 .footer-bottom {
-  color: #ffffff; /* ✅ White (was #94a3b8) */
+  color: #004d1a;
+  border-top: 1px solid #00ff41;
+  padding-top: 1rem;
 }
 
 /* ============================================
-   ABOUT SECTION
+   ABOUT SECTION - HACKER STYLE
    ============================================ */
 .about-section h2 {
-  color: #ffffff; /* ✅ White (was #1e3a8a) */
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
 .about-section p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
+  font-family: 'Courier New', monospace;
 }
 
 .feature-card h4 {
-  color: #ffffff; /* ✅ White (was #1e293b) */
+  color: #00ff41;
 }
 
 .feature-card p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
 }
 
 .feature-desc h3 {
-  color: #ffffff; /* ✅ White (was #1e3a8a) */
+  color: #00ff41;
+  border-left: 3px solid #00ff41;
+  padding-left: 1rem;
 }
 
 .feature-desc p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
 }
 
 .values ul li p {
-  color: #ffffff; /* ✅ White (was #475569) */
+  color: #33ff77;
+}
+
+/* ============================================
+   SELECTION COLOR - HACKER STYLE
+   ============================================ */
+::selection {
+  background: #00ff41;
+  color: #0a0e17;
+}
+
+::-moz-selection {
+  background: #00ff41;
+  color: #0a0e17;
 }
