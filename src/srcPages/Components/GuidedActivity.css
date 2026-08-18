@@ -4,7 +4,6 @@
   padding-bottom: 50px;
 }
 
-/* Header using deep brand blue */
 .activity-header {
   background-color: #1e3a8a;
   color: white;
@@ -31,17 +30,18 @@
 .header-content h1 {
   font-size: 2.2rem;
   margin: 0;
+  color: white;
 }
 
 .header-content p {
   opacity: 0.9;
   margin-top: 5px;
+  color: white;
 }
 
-/* Grid layout for cards */
 .activity-grid {
   max-width: 1200px;
-  margin: -30px auto 0; /* Overlaps slightly with header */
+  margin: -30px auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
-  border-top: 4px solid #1e3a8a; /* Accent line */
+  border-top: 4px solid #1e3a8a;
 }
 
 .activity-card:hover {
@@ -79,13 +79,13 @@
 
 .card-info h3 {
   margin: 0 0 10px 0;
-  color: #1e293b;
+  color: #1a1a2e;  /* ✅ Dark Text */
   font-size: 1.2rem;
   text-align: left;
 }
 
 .card-info p {
-  color: #64748b;
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
   line-height: 1.5;
   font-size: 0.95rem;
   text-align: left;
@@ -104,37 +104,47 @@
   font-size: 0.85rem;
 }
 
-.play-icon {
-  opacity: 0.7;
-}
-/* Update this to remove any negative margins */
 .activity-grid-layout {
   max-width: 1200px;
-  margin: 40px auto; /* Changed from -30px to 40px to push cards down */
+  margin: 40px auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
   padding: 0 25px;
 }
 
-/* Ensure the header doesn't overlap content */
 .activity-header-blue {
-  background-color: #1e3a8a; /* Your brand blue */
+  background-color: #1e3a8a;
   color: white;
   padding: 60px 20px;
   text-align: center;
-  position: relative; /* Changed from fixed/absolute if applicable */
+  position: relative;
   z-index: 10;
 }
 
-/* Cleaner Card Style (No Icon) */
+.activity-header-blue h1 {
+  color: white;
+}
+
+.activity-header-blue p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .activity-card-modern {
   background: white;
   border-radius: 15px;
   padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Slightly deeper shadow for clarity */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  border-top: 4px solid #1e3a8a; /* Top border for a modern look */
+  border-top: 4px solid #1e3a8a;
   transition: transform 0.2s;
+}
+
+.activity-card-modern h3 {
+  color: #1a1a2e;  /* ✅ Dark Text */
+}
+
+.activity-card-modern p {
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
 }
