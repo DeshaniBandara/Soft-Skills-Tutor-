@@ -7,7 +7,7 @@ import './QuizComponent.css';
 function QuizProblemSolvingComponent() {
   const navigate = useNavigate();
   // ✅ Fixed: Correct data key
-  const questions = mcqData["problem-solving-critical-thinking"];
+  const questions = mcqData["problem-solving"];
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
