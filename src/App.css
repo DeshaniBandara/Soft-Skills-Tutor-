@@ -36,46 +36,88 @@
 }
 
 /* ============================================
-   🌈 RGB ANIMATION WITH PAUSE
+   🎨 COLOR ANIMATION - White → Black → Blue → Red → Green → Yellow
    ============================================ */
-@keyframes rgbTextPause {
-  0% { color: #ff0000; text-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
-  10% { color: #ff0000; text-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
-  15% { color: #ff8800; text-shadow: 0 0 15px rgba(255, 136, 0, 0.4); }
-  25% { color: #ff8800; text-shadow: 0 0 15px rgba(255, 136, 0, 0.4); }
-  30% { color: #ffff00; text-shadow: 0 0 15px rgba(255, 255, 0, 0.4); }
-  40% { color: #ffff00; text-shadow: 0 0 15px rgba(255, 255, 0, 0.4); }
-  45% { color: #00ff00; text-shadow: 0 0 15px rgba(0, 255, 0, 0.4); }
-  55% { color: #00ff00; text-shadow: 0 0 15px rgba(0, 255, 0, 0.4); }
-  60% { color: #00ffff; text-shadow: 0 0 15px rgba(0, 255, 255, 0.4); }
-  70% { color: #00ffff; text-shadow: 0 0 15px rgba(0, 255, 255, 0.4); }
-  75% { color: #0088ff; text-shadow: 0 0 15px rgba(0, 136, 255, 0.4); }
-  85% { color: #0088ff; text-shadow: 0 0 15px rgba(0, 136, 255, 0.4); }
-  90% { color: #ff00ff; text-shadow: 0 0 15px rgba(255, 0, 255, 0.4); }
-  100% { color: #ff00ff; text-shadow: 0 0 15px rgba(255, 0, 255, 0.4); }
+@keyframes colorCyclePause {
+  0% { 
+    color: #ffffff; 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  12% { 
+    color: #ffffff; 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  15% { 
+    color: #000000; 
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  27% { 
+    color: #000000; 
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  30% { 
+    color: #1e3a8a; 
+    text-shadow: 0 0 20px rgba(30, 58, 138, 0.4);
+  }
+  42% { 
+    color: #1e3a8a; 
+    text-shadow: 0 0 20px rgba(30, 58, 138, 0.4);
+  }
+  45% { 
+    color: #dc2626; 
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+  }
+  57% { 
+    color: #dc2626; 
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+  }
+  60% { 
+    color: #16a34a; 
+    text-shadow: 0 0 20px rgba(22, 163, 74, 0.4);
+  }
+  72% { 
+    color: #16a34a; 
+    text-shadow: 0 0 20px rgba(22, 163, 74, 0.4);
+  }
+  75% { 
+    color: #eab308; 
+    text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+  }
+  87% { 
+    color: #eab308; 
+    text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+  }
+  90% { 
+    color: #ffffff; 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% { 
+    color: #ffffff; 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
 }
 
 /* ============================================
-   HEADINGS - PAUSED RGB
+   HEADINGS - COLOR CYCLE WITH PAUSE
    ============================================ */
 h1 {
-  animation: rgbTextPause 12s ease-in-out infinite;
+  animation: colorCyclePause 18s ease-in-out infinite;
   font-weight: 700;
   font-size: 2.5rem;
 }
 
 h2 {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 20s ease-in-out infinite;
   font-weight: 600;
 }
 
 h3 {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
   font-weight: 600;
 }
 
 h4, h5, h6 {
-  animation: rgbTextPause 16s ease-in-out infinite;
+  animation: colorCyclePause 24s ease-in-out infinite;
   font-weight: 500;
 }
 
@@ -83,7 +125,7 @@ h4, h5, h6 {
    PARAGRAPHS
    ============================================ */
 p {
-  animation: rgbTextPause 16s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
   line-height: 1.7;
 }
 
@@ -91,14 +133,14 @@ p {
    LINKS
    ============================================ */
 a {
-  animation: rgbTextPause 10s ease-in-out infinite;
+  animation: colorCyclePause 16s ease-in-out infinite;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
   animation: none;
-  color: #00ff00;
+  color: #1e3a8a;
   text-decoration: underline;
 }
 
@@ -106,11 +148,11 @@ a:hover {
    LISTS
    ============================================ */
 ul, ol {
-  animation: rgbTextPause 16s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 li {
-  animation: rgbTextPause 16s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
   margin-bottom: 0.5rem;
 }
 
@@ -165,9 +207,9 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #00ff00;
+  border-color: #16a34a;
   outline: none;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 20px rgba(22, 163, 74, 0.2);
 }
 
 input::placeholder, textarea::placeholder {
@@ -233,7 +275,7 @@ input::placeholder, textarea::placeholder {
 
 /* Brand elements */
 .nav-title span {
-  animation: rgbTextPause 8s ease-in-out infinite;
+  animation: colorCyclePause 14s ease-in-out infinite;
 }
 
 .mcq-button {
@@ -265,7 +307,7 @@ input::placeholder, textarea::placeholder {
 
   .download-header h1 {
     font-size: 2rem !important;
-    animation: rgbTextPause 8s ease-in-out infinite;
+    animation: colorCyclePause 14s ease-in-out infinite;
   }
 
   .card-frame {
@@ -281,68 +323,68 @@ input::placeholder, textarea::placeholder {
 }
 
 .nav-title span {
-  animation: rgbTextPause 8s ease-in-out infinite;
+  animation: colorCyclePause 14s ease-in-out infinite;
 }
 
 /* ============================================
    FOOTER
    ============================================ */
 .footer-box h3 {
-  animation: rgbTextPause 12s ease-in-out infinite;
+  animation: colorCyclePause 18s ease-in-out infinite;
 }
 
 .footer-box p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 .contact-details p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 .footer-bottom {
-  animation: rgbTextPause 16s ease-in-out infinite;
+  animation: colorCyclePause 26s ease-in-out infinite;
 }
 
 /* ============================================
    ABOUT SECTION
    ============================================ */
 .about-section h2 {
-  animation: rgbTextPause 12s ease-in-out infinite;
+  animation: colorCyclePause 18s ease-in-out infinite;
 }
 
 .about-section p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 .feature-card h4 {
-  animation: rgbTextPause 12s ease-in-out infinite;
+  animation: colorCyclePause 18s ease-in-out infinite;
 }
 
 .feature-card p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 .feature-desc h3 {
-  animation: rgbTextPause 12s ease-in-out infinite;
+  animation: colorCyclePause 18s ease-in-out infinite;
 }
 
 .feature-desc p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 .values ul li p {
-  animation: rgbTextPause 14s ease-in-out infinite;
+  animation: colorCyclePause 22s ease-in-out infinite;
 }
 
 /* ============================================
    SELECTION COLOR
    ============================================ */
 ::selection {
-  background: #00ff00;
-  color: #000000;
+  background: #1e3a8a;
+  color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #00ff00;
-  color: #000000;
+  background: #1e3a8a;
+  color: #ffffff;
 }
