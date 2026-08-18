@@ -42,43 +42,55 @@
 }
 
 /* ============================================
-   🎯 WHITE ↔ BLACK COLOR ANIMATION WITH PAUSE
+   🎯 WHITE ↔ BLACK ANIMATION WITH TEXT OUTLINE
    ============================================ */
 @keyframes whiteBlackPulse {
-  /* Start with Black */
+  /* Black text with White outline */
   0% {
     color: #000000;
-    text-shadow: none;
+    text-shadow: 
+      0 0 2px #ffffff,
+      0 0 4px #ffffff;
   }
-  /* Stay Black for a while (pause) */
+  /* Stay Black (pause) */
   15% {
     color: #000000;
-    text-shadow: none;
+    text-shadow: 
+      0 0 2px #ffffff,
+      0 0 4px #ffffff;
   }
-  /* Transition to White */
+  /* Transition to White text with Black outline */
   20% {
     color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 
+      0 0 2px #000000,
+      0 0 4px #000000;
   }
-  /* Stay White for a while (pause) */
+  /* Stay White (pause) */
   65% {
     color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 
+      0 0 2px #000000,
+      0 0 4px #000000;
   }
-  /* Transition back to Black */
+  /* Transition back to Black text with White outline */
   70% {
     color: #000000;
-    text-shadow: none;
+    text-shadow: 
+      0 0 2px #ffffff,
+      0 0 4px #ffffff;
   }
   /* Stay Black until cycle restarts */
   100% {
     color: #000000;
-    text-shadow: none;
+    text-shadow: 
+      0 0 2px #ffffff,
+      0 0 4px #ffffff;
   }
 }
 
 /* ============================================
-   APPLY ANIMATION TO ALL TEXT
+   APPLY ANIMATION WITH OUTLINE TO ALL TEXT
    ============================================ */
 
 /* Headings */
@@ -150,7 +162,7 @@ li {
 }
 
 /* ============================================
-   BUTTONS (Stay Fixed - No Animation)
+   BUTTONS (Stay Fixed)
    ============================================ */
 button {
   color: #ffffff;
@@ -174,7 +186,7 @@ button:disabled {
 }
 
 /* ============================================
-   INPUT FIELDS (Stay Fixed - No Animation)
+   INPUT FIELDS (Stay Fixed)
    ============================================ */
 input, textarea, select {
   color: #1e293b;
@@ -237,13 +249,13 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   CSS VARIABLES (Brand Colors)
+   CSS VARIABLES
    ============================================ */
 :root {
   --brand-blue: #1e3a8a;
 }
 
-/* Brand elements - White ↔ Black Animation */
+/* Brand elements - White ↔ Black with Outline */
 .nav-title span {
   animation: whiteBlackPulse 6s ease-in-out infinite;
 }
@@ -285,7 +297,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   NAVBAR - No Animation (Fixed Colors)
+   NAVBAR - Fixed Colors (No Animation)
    ============================================ */
 .nav-title {
   color: #0a192f;
@@ -297,7 +309,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   FOOTER - No Animation (Fixed Colors)
+   FOOTER - Fixed Colors (No Animation)
    ============================================ */
 .footer-box h3 {
   color: #1e3a8a;
@@ -316,7 +328,7 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ============================================
-   ABOUT SECTION - No Animation (Fixed Colors)
+   ABOUT SECTION - Fixed Colors (No Animation)
    ============================================ */
 .about-section h2 {
   color: #1e3a8a;
