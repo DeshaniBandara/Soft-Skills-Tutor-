@@ -1,14 +1,11 @@
 /* ============================================
-   ROOT CONTAINER - HACKER DARK THEME
+   ROOT CONTAINER
    ============================================ */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #0a0e17;
-  min-height: 100vh;
-  color: #00ff41;
 }
 
 /* ============================================
@@ -21,23 +18,15 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #00ff41);
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #00ff41);
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-@keyframes glitch {
-  0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
-  25% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
-  50% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
-  75% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
-  100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,169 +36,153 @@
 }
 
 /* ============================================
-   CARD SECTION - GLASSMORPHISM
+   🌈 RGB ANIMATION - Main Effect
+   ============================================ */
+@keyframes rgbText {
+  0% { color: #ff0000; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  16% { color: #ff8800; text-shadow: 0 0 10px rgba(255, 136, 0, 0.5); }
+  33% { color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
+  50% { color: #00ffff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+  66% { color: #0088ff; text-shadow: 0 0 10px rgba(0, 136, 255, 0.5); }
+  83% { color: #ff00ff; text-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
+  100% { color: #ff0000; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+}
+
+@keyframes rgbTextFast {
+  0% { color: #ff0000; }
+  10% { color: #ff8800; }
+  20% { color: #ffff00; }
+  30% { color: #00ff00; }
+  40% { color: #00ff88; }
+  50% { color: #00ffff; }
+  60% { color: #0088ff; }
+  70% { color: #8800ff; }
+  80% { color: #ff00ff; }
+  90% { color: #ff0088; }
+  100% { color: #ff0000; }
+}
+
+/* ============================================
+   HEADINGS - RGB ANIMATED
+   ============================================ */
+h1 {
+  animation: rgbText 4s ease-in-out infinite;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h1:hover {
+  animation: rgbTextFast 0.8s ease-in-out infinite;
+}
+
+h2 {
+  animation: rgbText 5s ease-in-out infinite;
+  font-weight: 600;
+}
+
+h3 {
+  animation: rgbText 6s ease-in-out infinite;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  animation: rgbText 7s ease-in-out infinite;
+  font-weight: 500;
+}
+
+/* ============================================
+   PARAGRAPHS - RGB ANIMATED
+   ============================================ */
+p {
+  animation: rgbText 6s ease-in-out infinite;
+  line-height: 1.7;
+}
+
+/* ============================================
+   LINKS - RGB ANIMATED
+   ============================================ */
+a {
+  animation: rgbText 3s ease-in-out infinite;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  animation: rgbTextFast 0.5s ease-in-out infinite;
+  text-decoration: underline;
+}
+
+/* ============================================
+   LISTS - RGB ANIMATED
+   ============================================ */
+ul, ol {
+  animation: rgbText 6s ease-in-out infinite;
+}
+
+li {
+  animation: rgbText 6s ease-in-out infinite;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   CARD SECTION
    ============================================ */
 .card {
   padding: 2em;
   margin: 1em auto;
   max-width: 600px;
-  background: rgba(10, 14, 23, 0.9);
-  border: 1px solid #00ff41;
+  background: #f9f9f9;
   border-radius: 8px;
-  color: #00ff41;
-  box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ============================================
-   HEADINGS - GLITCH EFFECT
-   ============================================ */
-h1 {
-  color: #00ff41;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
-}
-
-h1:hover {
-  animation: glitch 0.3s infinite;
-}
-
-h2 {
-  color: #00ff41;
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
-}
-
-h3 {
-  color: #00ff41;
-  font-weight: 600;
-}
-
-h4, h5, h6 {
-  color: #00cc33;
-  font-weight: 500;
-}
-
-/* ============================================
-   PARAGRAPHS - TERMINAL STYLE
-   ============================================ */
-p {
-  color: #33ff77;
-  line-height: 1.7;
-  font-family: 'Courier New', monospace;
-}
-
-/* ============================================
-   LINKS - NEON CYAN
-   ============================================ */
-a {
-  color: #00ffff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-}
-
-a:hover {
-  color: #00ff41;
-  text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
-  text-decoration: underline;
-}
-
-/* ============================================
-   BUTTONS - HACKER STYLE
+   BUTTONS - RGB GLOW
    ============================================ */
 button {
-  color: #00ff41;
-  background-color: transparent;
-  border: 1px solid #00ff41;
+  color: #ffffff;
+  background-color: #1e3a8a;
+  border: none;
   padding: 0.6em 1.2em;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Courier New', monospace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
 }
 
 button:hover {
-  background-color: #00ff41;
-  color: #0a0e17;
-  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  background-color: #3b82f6;
   transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 136, 255, 0.3);
 }
 
 button:disabled {
-  opacity: 0.3;
+  background-color: #94a3b8;
   cursor: not-allowed;
   transform: none;
-  box-shadow: none;
 }
 
 /* ============================================
-   LISTS
-   ============================================ */
-ul, ol {
-  color: #33ff77;
-  font-family: 'Courier New', monospace;
-}
-
-li {
-  color: #33ff77;
-  margin-bottom: 0.5rem;
-  list-style-type: '> ';
-}
-
-li::marker {
-  color: #00ff41;
-}
-
-/* ============================================
-   INPUT FIELDS - TERMINAL STYLE
+   INPUT FIELDS - RGB BORDER
    ============================================ */
 input, textarea, select {
-  color: #00ff41;
-  background: rgba(10, 14, 23, 0.9);
-  border: 1px solid #00ff41;
-  border-radius: 4px;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 2px solid #1e3a8a;
+  border-radius: 8px;
   padding: 0.6rem 1rem;
   font-size: 1rem;
-  font-family: 'Courier New', monospace;
   transition: all 0.3s ease;
-  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.05);
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #00ffff;
+  animation: rgbTextFast 1s ease-in-out infinite;
   outline: none;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.05);
+  border-color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
 input::placeholder, textarea::placeholder {
-  color: #004d1a;
-}
-
-/* ============================================
-   SCROLLBAR - HACKER STYLE
-   ============================================ */
-::-webkit-scrollbar {
-  width: 8px;
-  background: #0a0e17;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0e17;
-  border-left: 1px solid #00ff41;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #00ff41;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #00ffff;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  color: #94a3b8;
 }
 
 /* ============================================
@@ -235,6 +208,9 @@ input::placeholder, textarea::placeholder {
     max-width: 90%;
     padding: 1.5em;
   }
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -246,54 +222,43 @@ input::placeholder, textarea::placeholder {
   }
   h1 {
     font-size: 1.5rem;
-    color: #00ff41;
   }
   p {
     font-size: 0.9rem;
-    color: #33ff77;
   }
 }
 
 /* ============================================
-   CSS VARIABLES (HACKER COLORS)
+   CSS VARIABLES
    ============================================ */
 :root {
-  --hacker-green: #00ff41;
-  --hacker-bright-green: #33ff77;
-  --hacker-cyan: #00ffff;
-  --hacker-dark: #0a0e17;
-  --hacker-gray: #004d1a;
-  --hacker-red: #ff0044;
+  --brand-blue: #1e3a8a;
+  --brand-light: #3b82f6;
+  --brand-dark: #0a192f;
+  --text-dark: #1e293b;
+  --text-gray: #475569;
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --border-color: #e2e8f0;
 }
 
-/* Brand elements - Hacker Style */
+/* Brand elements */
 .nav-title span {
-  color: var(--hacker-green);
-  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
-}
-
-.nav-title span:hover {
-  animation: glitch 0.5s infinite;
+  color: var(--brand-blue);
 }
 
 .mcq-button {
-  background-color: transparent;
-  color: #00ff41;
-  border: 1px solid #00ff41;
+  background-color: var(--brand-blue);
+  color: white;
   padding: 12px 24px;
-  border-radius: 4px;
-  font-family: 'Courier New', monospace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
+  transition: background 0.3s ease;
 }
 
 .mcq-button:hover {
-  background-color: #00ff41;
-  color: #0a0e17;
-  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  background-color: var(--brand-light);
 }
 
 /* ============================================
@@ -307,103 +272,88 @@ input::placeholder, textarea::placeholder {
 
   .download-container {
     padding: 60px 20px !important;
-    background-color: #0a0e17 !important;
   }
 
   .download-header h1 {
     font-size: 2rem !important;
-    color: #00ff41 !important;
-    text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    animation: rgbText 3s ease-in-out infinite;
   }
 
   .card-frame {
     padding: 20px !important;
-    background: rgba(10, 14, 23, 0.9) !important;
-    border: 1px solid #00ff41 !important;
   }
 }
 
 /* ============================================
-   NAVBAR - HACKER STYLE
+   NAVBAR
    ============================================ */
 .nav-title {
-  color: #00ff41;
   font-weight: 700;
-  font-family: 'Courier New', monospace;
-  text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
 .nav-title span {
-  color: #00ff41;
+  animation: rgbText 3s ease-in-out infinite;
 }
 
 /* ============================================
-   FOOTER - HACKER STYLE
+   FOOTER - RGB ANIMATED
    ============================================ */
 .footer-box h3 {
-  color: #00ff41;
-  text-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+  animation: rgbText 4s ease-in-out infinite;
 }
 
 .footer-box p {
-  color: #33ff77;
-  font-family: 'Courier New', monospace;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 .contact-details p {
-  color: #33ff77;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 .footer-bottom {
-  color: #004d1a;
-  border-top: 1px solid #00ff41;
-  padding-top: 1rem;
+  animation: rgbText 6s ease-in-out infinite;
 }
 
 /* ============================================
-   ABOUT SECTION - HACKER STYLE
+   ABOUT SECTION - RGB ANIMATED
    ============================================ */
 .about-section h2 {
-  color: #00ff41;
-  text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  animation: rgbText 4s ease-in-out infinite;
 }
 
 .about-section p {
-  color: #33ff77;
-  font-family: 'Courier New', monospace;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 .feature-card h4 {
-  color: #00ff41;
+  animation: rgbText 4s ease-in-out infinite;
 }
 
 .feature-card p {
-  color: #33ff77;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 .feature-desc h3 {
-  color: #00ff41;
-  border-left: 3px solid #00ff41;
-  padding-left: 1rem;
+  animation: rgbText 4s ease-in-out infinite;
 }
 
 .feature-desc p {
-  color: #33ff77;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 .values ul li p {
-  color: #33ff77;
+  animation: rgbText 5s ease-in-out infinite;
 }
 
 /* ============================================
-   SELECTION COLOR - HACKER STYLE
+   SELECTION COLOR
    ============================================ */
 ::selection {
-  background: #00ff41;
-  color: #0a0e17;
+  background: #00ff00;
+  color: #000000;
 }
 
 ::-moz-selection {
-  background: #00ff41;
-  color: #0a0e17;
+  background: #00ff00;
+  color: #000000;
 }
