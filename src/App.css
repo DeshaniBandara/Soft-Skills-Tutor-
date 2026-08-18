@@ -44,66 +44,66 @@
   max-width: 600px;
   background: #f9f9f9;
   border-radius: 8px;
-  color: #1e293b;
+  color: #ffffff; /* ✅ White */
 }
 
 /* ============================================
    DOCS LINK
    ============================================ */
 .read-the-docs {
-  color: #64748b;
+  color: #ffffff; /* ✅ White (was #64748b) */
 }
 
 /* ============================================
-   HEADINGS - Brand Color Theme
+   HEADINGS - ALL WHITE
    ============================================ */
 h1 {
-  color: #0a192f;
+  color: #ffffff; /* ✅ White (was #0a192f) */
   font-weight: 700;
 }
 
 h2 {
-  color: #1e3a8a;
+  color: #ffffff; /* ✅ White (was #1e3a8a) */
   font-weight: 600;
 }
 
 h3 {
-  color: #1e293b;
+  color: #ffffff; /* ✅ White (was #1e293b) */
   font-weight: 600;
 }
 
 h4, h5, h6 {
-  color: #334155;
+  color: #ffffff; /* ✅ White (was #334155) */
   font-weight: 500;
 }
 
 /* ============================================
-   PARAGRAPHS
+   PARAGRAPHS - WHITE
    ============================================ */
 p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
   line-height: 1.7;
 }
 
 /* ============================================
-   LINKS - Brand Blue
+   LINKS - WHITE
    ============================================ */
 a {
-  color: #1e3a8a;
+  color: #ffffff; /* ✅ White (was #1e3a8a) */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #3b82f6;
+  color: #93c5fd; /* Light blue on hover */
   text-decoration: underline;
 }
 
 /* ============================================
-   BUTTONS - Brand Blue
+   BUTTONS
    ============================================ */
 button {
-  color: #ffffff;
+  color: #ffffff; /* ✅ White */
   background-color: #1e3a8a;
   border: none;
   padding: 0.6em 1.2em;
@@ -124,22 +124,22 @@ button:disabled {
 }
 
 /* ============================================
-   LISTS
+   LISTS - WHITE
    ============================================ */
 ul, ol {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 li {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
   margin-bottom: 0.5rem;
 }
 
 /* ============================================
-   INPUT FIELDS
+   INPUT FIELDS - WHITE TEXT
    ============================================ */
 input, textarea, select {
-  color: #1e293b;
+  color: #ffffff; /* ✅ White (was #1e293b) */
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -155,7 +155,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 input::placeholder, textarea::placeholder {
-  color: #94a3b8;
+  color: #cbd5e1; /* ✅ Light gray placeholder (visible on white bg) */
 }
 
 /* ============================================
@@ -192,9 +192,11 @@ input::placeholder, textarea::placeholder {
   }
   h1 {
     font-size: 1.5rem;
+    color: #ffffff; /* ✅ White */
   }
   p {
     font-size: 0.9rem;
+    color: #ffffff; /* ✅ White */
   }
 }
 
@@ -214,12 +216,12 @@ input::placeholder, textarea::placeholder {
 
 /* Brand elements */
 .nav-title span {
-  color: var(--brand-blue);
+  color: #ffffff; /* ✅ White (was var(--brand-blue)) */
 }
 
 .mcq-button {
   background-color: var(--brand-blue);
-  color: white;
+  color: #ffffff; /* ✅ White */
   padding: 12px 24px;
   border-radius: 8px;
   border: none;
@@ -246,7 +248,7 @@ input::placeholder, textarea::placeholder {
 
   .download-header h1 {
     font-size: 2rem !important;
-    color: #1e3a8a;
+    color: #ffffff; /* ✅ White (was #1e3a8a) */
   }
 
   .card-frame {
@@ -258,60 +260,60 @@ input::placeholder, textarea::placeholder {
    NAVBAR
    ============================================ */
 .nav-title {
-  color: #0a192f;
+  color: #ffffff; /* ✅ White (was #0a192f) */
   font-weight: 700;
 }
 
 .nav-title span {
-  color: var(--brand-blue);
+  color: #ffffff; /* ✅ White (was var(--brand-blue)) */
 }
 
 /* ============================================
    FOOTER
    ============================================ */
 .footer-box h3 {
-  color: #1e3a8a;
+  color: #ffffff; /* ✅ White (was #1e3a8a) */
 }
 
 .footer-box p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 .contact-details p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 .footer-bottom {
-  color: #94a3b8;
+  color: #ffffff; /* ✅ White (was #94a3b8) */
 }
 
 /* ============================================
    ABOUT SECTION
    ============================================ */
 .about-section h2 {
-  color: #1e3a8a;
+  color: #ffffff; /* ✅ White (was #1e3a8a) */
 }
 
 .about-section p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 .feature-card h4 {
-  color: #1e293b;
+  color: #ffffff; /* ✅ White (was #1e293b) */
 }
 
 .feature-card p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 .feature-desc h3 {
-  color: #1e3a8a;
+  color: #ffffff; /* ✅ White (was #1e3a8a) */
 }
 
 .feature-desc p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
 
 .values ul li p {
-  color: #475569;
+  color: #ffffff; /* ✅ White (was #475569) */
 }
