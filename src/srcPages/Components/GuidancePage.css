@@ -1,4 +1,3 @@
-/* Reusing your global navigation styles for consistency */
 .explore-page-wrapper {
   min-height: 100vh;
   background-color: #fcfcfd;
@@ -25,11 +24,22 @@
   cursor: pointer;
 }
 
-.nav-logo-img { height: 40px; width: auto; }
-.nav-title { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0; }
-.nav-title span { color: #5c7cfa; }
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+}
 
-/* Guidance Content Styling */
+.nav-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0a192f;  /* ✅ Dark Text */
+  margin: 0;
+}
+
+.nav-title span {
+  color: #1e3a8a;
+}
+
 .gui-main-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -43,7 +53,7 @@
 
 .gui-status-badge {
   background: #eff6ff;
-  color: #3b82f6;
+  color: #1e3a8a;  /* ✅ Dark Blue Text */
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -53,17 +63,16 @@
 
 .gui-hero-section h2 {
   font-size: 2.8rem;
-  color: #1e3a8a;
+  color: #0a192f;  /* ✅ Dark Text */
   margin: 15px 0;
   font-weight: 800;
 }
 
 .gui-hero-section p {
-  color: #64748b;
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
   font-size: 1.1rem;
 }
 
-/* Steps Layout */
 .gui-steps-container {
   display: flex;
   flex-direction: column;
@@ -88,12 +97,6 @@
   box-shadow: 0 10px 30px rgba(30, 58, 138, 0.05);
 }
 
-.gui-step-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .gui-icon-holder {
   width: 50px;
   height: 50px;
@@ -108,13 +111,13 @@
 
 .gui-step-text h3 {
   font-size: 1.25rem;
-  color: #1e3a8a;
+  color: #1a1a2e;  /* ✅ Dark Text */
   margin-bottom: 8px;
   font-weight: 700;
 }
 
 .gui-step-text p {
-  color: #64748b;
+  color: #4a4a6a;  /* ✅ Dark Gray Text */
   line-height: 1.6;
   font-size: 1rem;
   max-width: 700px;
@@ -131,9 +134,14 @@
   pointer-events: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .gui-hero-section h2 { font-size: 2rem; }
-  .gui-step-item { padding: 20px; }
-  .gui-step-number-bg { display: none; }
+  .gui-hero-section h2 {
+    font-size: 2rem;
+  }
+  .gui-step-item {
+    padding: 20px;
+  }
+  .gui-step-number-bg {
+    display: none;
+  }
 }
