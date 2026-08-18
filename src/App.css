@@ -1,5 +1,5 @@
 /* ============================================
-   ROOT CONTAINER - Clean & Readable
+   ROOT CONTAINER
    ============================================ */
 #root {
   max-width: 1280px;
@@ -8,6 +8,33 @@
   text-align: center;
   background-color: #ffffff;
   min-height: 100vh;
+}
+
+/* ============================================
+   🎨 AUTOMATIC TEXT COLOR SYSTEM
+   ============================================ */
+
+/* Default: dark text on light background */
+* {
+  color: #1e293b;
+}
+
+/* Auto-contrast for any element - works everywhere */
+.auto-contrast {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* For light backgrounds */
+.auto-contrast-light {
+  color: #1e293b;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* For dark backgrounds */
+.auto-contrast-dark {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* ============================================
@@ -51,53 +78,73 @@
 }
 
 /* ============================================
-   HEADINGS - Dark for Readability
+   HEADINGS
    ============================================ */
 h1 {
   color: #0a192f;
   font-weight: 700;
   font-size: 2.5rem;
 }
+h1.auto-contrast-dark {
+  color: #ffffff;
+}
 
 h2 {
   color: #1e3a8a;
   font-weight: 600;
+}
+h2.auto-contrast-dark {
+  color: #ffffff;
 }
 
 h3 {
   color: #1e293b;
   font-weight: 600;
 }
+h3.auto-contrast-dark {
+  color: #ffffff;
+}
 
 h4, h5, h6 {
   color: #334155;
   font-weight: 500;
 }
+h4.auto-contrast-dark, h5.auto-contrast-dark, h6.auto-contrast-dark {
+  color: #ffffff;
+}
 
 /* ============================================
-   PARAGRAPHS - Dark Gray for Readability
+   PARAGRAPHS
    ============================================ */
 p {
   color: #334155;
   line-height: 1.7;
 }
+p.auto-contrast-dark {
+  color: #ffffff;
+}
 
 /* ============================================
-   LINKS - Brand Blue
+   LINKS
    ============================================ */
 a {
   color: #1e3a8a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 a:hover {
   color: #3b82f6;
   text-decoration: underline;
 }
+a.auto-contrast-dark {
+  color: #ffffff;
+}
+a.auto-contrast-dark:hover {
+  color: #93c5fd;
+}
 
 /* ============================================
-   BUTTONS - Brand Blue
+   BUTTONS
    ============================================ */
 button {
   color: #ffffff;
@@ -108,12 +155,10 @@ button {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 button:hover {
   background-color: #3b82f6;
   transform: translateY(-2px);
 }
-
 button:disabled {
   background-color: #94a3b8;
   cursor: not-allowed;
@@ -126,10 +171,16 @@ button:disabled {
 ul, ol {
   color: #334155;
 }
+ul.auto-contrast-dark, ol.auto-contrast-dark {
+  color: #ffffff;
+}
 
 li {
   color: #334155;
   margin-bottom: 0.5rem;
+}
+li.auto-contrast-dark {
+  color: #ffffff;
 }
 
 /* ============================================
@@ -144,13 +195,11 @@ input, textarea, select {
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
-
 input:focus, textarea:focus, select:focus {
   border-color: #1e3a8a;
   outline: none;
   box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
 }
-
 input::placeholder, textarea::placeholder {
   color: #94a3b8;
 }
@@ -159,43 +208,20 @@ input::placeholder, textarea::placeholder {
    RESPONSIVE TWEAKS
    ============================================ */
 @media (max-width: 1024px) {
-  #root {
-    padding: 1.5rem;
-  }
-  .logo {
-    height: 4em;
-  }
+  #root { padding: 1.5rem; }
+  .logo { height: 4em; }
 }
-
 @media (max-width: 768px) {
-  #root {
-    padding: 1rem;
-  }
-  .logo {
-    height: 3em;
-  }
-  .card {
-    max-width: 90%;
-    padding: 1.5em;
-  }
-  h1 {
-    font-size: 2rem;
-  }
+  #root { padding: 1rem; }
+  .logo { height: 3em; }
+  .card { max-width: 90%; padding: 1.5em; }
+  h1 { font-size: 2rem; }
 }
-
 @media (max-width: 480px) {
-  #root {
-    padding: 0.5rem;
-  }
-  .logo {
-    height: 2.5em;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
+  #root { padding: 0.5rem; }
+  .logo { height: 2.5em; }
+  h1 { font-size: 1.5rem; }
+  p { font-size: 0.9rem; }
 }
 
 /* ============================================
@@ -226,7 +252,6 @@ input::placeholder, textarea::placeholder {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .mcq-button:hover {
   background-color: var(--brand-light);
 }
@@ -239,110 +264,68 @@ input::placeholder, textarea::placeholder {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
-
   .download-container {
     padding: 60px 20px !important;
   }
-
   .download-header h1 {
     font-size: 2rem !important;
     color: #1e3a8a;
   }
-
   .card-frame {
     padding: 20px !important;
   }
 }
 
 /* ============================================
-   NAVBAR - Clean & Readable
+   NAVBAR
    ============================================ */
 .nav-title {
   color: #0a192f;
   font-weight: 700;
 }
-
 .nav-title span {
   color: var(--brand-blue);
 }
 
 /* ============================================
-   FOOTER - Clean & Readable
+   FOOTER
    ============================================ */
 .footer-box h3 {
   color: #1e3a8a;
 }
-
 .footer-box p {
   color: #475569;
 }
-
 .contact-details p {
   color: #475569;
 }
-
 .footer-bottom {
   color: #94a3b8;
 }
 
 /* ============================================
-   ABOUT SECTION - Clean & Readable
+   ABOUT SECTION
    ============================================ */
 .about-section h2 {
   color: #1e3a8a;
 }
-
 .about-section p {
   color: #475569;
 }
-
 .feature-card h4 {
   color: #1e293b;
 }
-
 .feature-card p {
   color: #475569;
 }
-
 .feature-desc h3 {
   color: #1e3a8a;
 }
-
 .feature-desc p {
   color: #475569;
 }
-
 .values ul li p {
   color: #475569;
-}
-
-/* ============================================
-   TEXT VISIBILITY FIXES
-   ============================================ */
-
-/* Fix for white text on white background */
-.bg-light {
-  color: #1e293b !important;
-}
-
-/* Fix for dark text on dark background */
-.bg-dark {
-  color: #ffffff !important;
-}
-
-/* General text visibility */
-.text-visible {
-  color: #1e293b !important;
-}
-
-/* Fix for any hidden text issues */
-.hidden-text {
-  color: #1e293b !important;
-}
-
-/* Ensure all text is readable */
-* {
-  color: inherit;
 }
 
 /* ============================================
@@ -352,7 +335,6 @@ input::placeholder, textarea::placeholder {
   background: #1e3a8a;
   color: #ffffff;
 }
-
 ::-moz-selection {
   background: #1e3a8a;
   color: #ffffff;
